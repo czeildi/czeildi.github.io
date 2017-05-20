@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>experiments related to R</title>
+    <title>experiments with R</title>
     <link>/</link>
-    <description>Recent content on experiments related to R</description>
+    <description>Recent content on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 May 2017 15:32:39 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About Me</title>
+      <link>/about/</link>
+      <pubDate>Sat, 20 May 2017 15:32:39 +0200</pubDate>
+      
+      <guid>/about/</guid>
+      <description>My name is Ildi Czeller and I work as a Data Scientist at Emarsys in the Budapest office since I graduated as a mathematician from ELTE. Besides my work at Emarsys I am a mentor and organizer at Techcamp. I am also a proud alumna and supporter of The Joy of Thinking Foundation.</description>
+    </item>
     
     <item>
       <title>The dot symbol</title>
