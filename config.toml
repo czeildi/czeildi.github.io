@@ -12,19 +12,10 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "About"
-    url = "/about/"
+    url = "/page/about/"
 [[menu.main]]
     name = "Blog"
     url = "/post/"
-[[menu.main]]
-    name = "GitHub"
-    url = "https://github.com/czeildi"
-[[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/czeildi"
-[[menu.main]]
-    name = "LinkedIn"
-    url = "https://www.linkedin.com/in/ildiko-czeller-310465a7"
 
 [params]
     description = "Personal website of Ildi Czeller"
@@ -37,6 +28,7 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 
     MathJaxCDN = "//cdn.bootcss.com"
     MathJaxVersion = "2.7.1"
+    
 
     [params.logo]
     url = "logo.png"

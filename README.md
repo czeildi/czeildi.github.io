@@ -1,4 +1,4 @@
 # czeildi.github.io
-My personal website (WIP)
+My personal website.
 
-built with blogdown, available on http://ildiczeller.netlify.com/ .
+Built with blogdown, available at [https://www.ildiczeller.com/](https://www.ildiczeller.com/).
