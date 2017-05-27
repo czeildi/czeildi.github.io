@@ -1,5 +1,5 @@
 ---
-title: The dot symbol
+title: the dot symbol
 author: Ildi Czeller
 date: '2017-01-28'
 slug: the-dot-symbol
