@@ -17,7 +17,9 @@
       <pubDate>Sat, 27 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/27/ggplot2-book-learnings/</guid>
-      <description></description>
+      <description>I have been using ggplot2 quite extensively for two years now but I still learn new things from reading and re-reading Hadley Wickhams’s ggplot2 book. Here are some examples.
+library(&amp;quot;ggplot2&amp;quot;) library(&amp;quot;magrittr&amp;quot;) You not only can have free scales with facetting but also free space. This is especially useful with discrete axis.
+ggplot(mpg, aes(cty, model)) + geom_point() + facet_grid( manufacturer ~ ., space = &amp;quot;free&amp;quot;, scales = &amp;quot;free&amp;quot; ) + theme( strip.</description>
     </item>
     
     <item>
