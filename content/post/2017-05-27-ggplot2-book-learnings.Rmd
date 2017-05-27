@@ -1,0 +1,10 @@
+---
+title: ggplot2 book learnings
+author: ~
+date: '2017-05-27'
+slug: ggplot2-book-learnings
+categories: ["R"]
+tags: ["ggplot2"]
+draft: true
+---
+

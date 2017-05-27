@@ -6,10 +6,19 @@
     <description>Recent content in Purrr on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/purrr/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>purrr beyond map and walk</title>
+      <link>/2017/05/27/purrr-beyond-map-and-walk/</link>
+      <pubDate>Sat, 27 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/27/purrr-beyond-map-and-walk/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>The dot symbol</title>
