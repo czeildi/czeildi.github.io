@@ -2,60 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>experiments with R</title>
-    <link>/</link>
+    <link>https://czeildi.github.io/</link>
     <description>Recent content on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 May 2017 15:32:39 +0200</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://czeildi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>ggplot2 book learnings</title>
-      <link>/2017/05/27/ggplot2-book-learnings/</link>
-      <pubDate>Sat, 27 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/05/27/ggplot2-book-learnings/</guid>
-      <description>I have been using ggplot2 quite extensively for two years now but I still learn new things from reading and re-reading Hadley Wickhams’s ggplot2 book. Here are some examples.
-library(&amp;quot;ggplot2&amp;quot;) library(&amp;quot;magrittr&amp;quot;) You not only can have free scales with facetting but also free space. This is especially useful with discrete axis.
-ggplot(mpg, aes(cty, model)) + geom_point() + facet_grid( manufacturer ~ ., space = &amp;quot;free&amp;quot;, scales = &amp;quot;free&amp;quot; ) + theme( strip.</description>
-    </item>
-    
-    <item>
-      <title>purrr beyond map and walk</title>
-      <link>/2017/05/27/purrr-beyond-map-and-walk/</link>
-      <pubDate>Sat, 27 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/05/27/purrr-beyond-map-and-walk/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>About Me</title>
-      <link>/page/about/</link>
+      <link>https://czeildi.github.io/page/about/</link>
       <pubDate>Sat, 20 May 2017 15:32:39 +0200</pubDate>
       
-      <guid>/page/about/</guid>
+      <guid>https://czeildi.github.io/page/about/</guid>
       <description>My name is Ildi Czeller and I work as a Data Scientist at Emarsys in the Budapest office since I graduated as a mathematician from ELTE. Besides my work at Emarsys I am a mentor and organizer at Techcamp. I am also a proud alumna and supporter of The Joy of Thinking Foundation.</description>
     </item>
     
     <item>
       <title>the dot symbol</title>
-      <link>/2017/01/28/the-dot-symbol/</link>
+      <link>https://czeildi.github.io/2017/01/28/the-dot-symbol/</link>
       <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/01/28/the-dot-symbol/</guid>
+      <guid>https://czeildi.github.io/2017/01/28/the-dot-symbol/</guid>
       <description>The dot . appears in different places in the R ecosystem: e.g. purrr, magittr’s %&amp;gt;%. I will explore and explain what happens if you mix these usages, or nest them, how the dot symbol is special and how it is not.
 Basic usage %&amp;gt;% of magrittr You should use the dot if the parameter you pipe forward is not the first parameter of your next function or if you use pipe with data.</description>
     </item>
     
     <item>
       <title>ggplot2: exploration of the group aesthetics</title>
-      <link>/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</link>
+      <link>https://czeildi.github.io/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</link>
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</guid>
+      <guid>https://czeildi.github.io/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</guid>
       <description>I have made several plots with ggplot2 in the past 2 years and occasionally got errors related to the group aesthetics. I solved these issues without once taking the time to fully understand how the group aesthetic works. This blogpost is a result of my experiments to finally explore how it works. My understanding is a combination of my experiments and Hadley Wickhams outstanding book about ggplot2. (https://github.com/hadley/ggplot2-book)
 Scenario 1: mapping based on one variable Our dummy data will be a unit square.</description>
     </item>

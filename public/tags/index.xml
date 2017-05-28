@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on experiments with R</title>
-    <link>/tags/</link>
+    <link>https://czeildi.github.io/tags/</link>
     <description>Recent content in Tags on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://czeildi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ggplot2</title>
-      <link>/tags/ggplot2/</link>
-      <pubDate>Sat, 27 May 2017 00:00:00 +0000</pubDate>
+      <link>https://czeildi.github.io/tags/ggplot2/</link>
+      <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ggplot2/</guid>
+      <guid>https://czeildi.github.io/tags/ggplot2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Magrittr</title>
-      <link>/tags/magrittr/</link>
+      <link>https://czeildi.github.io/tags/magrittr/</link>
       <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/magrittr/</guid>
+      <guid>https://czeildi.github.io/tags/magrittr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Purrr</title>
-      <link>/tags/purrr/</link>
-      <pubDate>Sat, 27 May 2017 00:00:00 +0000</pubDate>
+      <link>https://czeildi.github.io/tags/purrr/</link>
+      <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/purrr/</guid>
+      <guid>https://czeildi.github.io/tags/purrr/</guid>
       <description></description>
     </item>
     
