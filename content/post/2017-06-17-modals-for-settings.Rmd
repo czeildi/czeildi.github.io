@@ -7,16 +7,16 @@ categories: ["R"]
 tags: ["shiny"]
 ---
 
-For some time I have been wondering about the best way to hide more advanced settings from the regular user fo your app. I have some apps with many different filters and options, all of which I want to keep because they have their legitimate usage. However, they take up valuable space and also confuse the user who does not need advanced options at the moment.
+For some time I have been wondering about the best way to hide more advanced settings from the regular user of your app. I have some apps with many different filters and options, all of which I want to keep because they have their legitimate usage. However, they take up valuable space and also confuse the user who does not need advanced options at the moment.
 
 I also learned about the possibility of using modals and wondered whether there is a use case waiting to be solved.
 
-I came up with using modals to only show advanced options on request. I am not perfectly happy with it however I learned a lot from doing it so I decided to share it.
+I came up with using modals to only show advanced options on request. I am not perfectly happy with the solution, however I learned a lot from doing it so I decided to share it.
 
-I build a dead simple shiny app which you can find here alongside the code: [persistent modal shiny example](https://ildi-czeller.shinyapps.io/persistent_modal/).
+I built a dead simple shiny app which you can find here alongside the code: [persistent modal shiny example](https://ildi-czeller.shinyapps.io/persistent_modal/).
 
 The most important thing to solve was to keep the set values of advanced options between reopenings of the modal. I solved this with reactive values.
 
-What I did not manage to solve is to apply those advanced options if and only if the user explicitly asks for applying them. I can either change them upon every modification, or upon opening the modal or pressing the apply button. But this is good enough for now. Any suggestions are welcome.
+What I did not manage to solve was to apply those advanced options if and only if the user explicitly asks for applying them. I can either change them upon every modification, or upon opening the modal or pressing the apply button. But this is good enough for now. Any suggestions are welcome.
 
 
