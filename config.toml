@@ -4,7 +4,7 @@ languageCode = "en-us"
 title = "experiments with R"
 theme = "hugo-lithium-theme"
 googleAnalytics = ""
-disqusShortname = ""
+disqusShortname = "ildiczeller"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 
 [permalinks]
