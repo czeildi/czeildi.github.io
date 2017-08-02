@@ -17,7 +17,7 @@ library("magrittr")
 library("data.table")
 ```
 
-The dot `.` appears in different places in the R ecosystem: e.g. purrr, magittr's `%>%`. I will explore and explain what happens if you mix these usages, or nest them, how the dot symbol is special and how it is not.
+The dot `.` appears in different places in the R ecosystem: e.g. purrr, magrittr's `%>%`. I will explore and explain what happens if you mix these usages, or nest them, how the dot symbol is special and how it is not.
 
 ## Basic usage
 

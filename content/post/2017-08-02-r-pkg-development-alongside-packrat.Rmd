@@ -1,0 +1,74 @@
+---
+title: R pkg development alongside packrat
+author: Ildi Czeller
+date: '2017-08-02'
+slug: r-pkg-development-alongside-packrat
+categories: ["R"]
+tags: ["packrat", "covr", "pkgdown"]
+---
+
+I use packrat for all my projects at Emarsys so for our internal packages as well as it eases collaboration. During package development there are numerous packages which come handy during development but not needed for usage. These are usually listed under the `Suggests` or `Enhances` field in the `DESCRIPTION` file. *But should these be tracked with packrat as well?* 
+
+In my opinion, it depends. If it is `testthat` or `roxygen2` probably everyone contributing to the package will use it so it makes sense to track with packrat. However, if it something only useful for a part of the package or you are experimenting with it like myself with `covr`, `pkgdown` or `goodpractice` it makes sense not to make the project unnecessarily big and slow. In the following I will describe my experiences so far.
+
+What makes all of this possible: the 
+```{r, eval=FALSE}
+packrat::with_extlib(packages = c(), expr = {})
+```
+command which basically allows you to use a library from outside your poject library temporarily. Though I do not yet understand the subtleties of it, it already proved to be pretty useful.
+
+## using pkgdown to generate a static documentation site
+
+It seems that `with_extlib` does not load dependencies of used package so you need to manually add them (at least those for which you get an error otherwise).
+
+```{r, eval = FALSE}
+packrat::with_extlib(
+    c("pkgdown", "pkgload", "pkgbuild",
+      "highlight", 'debugme', "processx"),
+    build_site()
+)
+```
+
+I also tried calling `build_site()` from the parent directory with `pkgdown::build_site("folder_name_of_package")` but it failed after initializing, in the building home phase with the following error message:
+```
+pandoc: emsvisualizer/README.md: openFile: does not exist (No such file or directory)
+Error: pandoc document conversion failed with error 1
+```
+
+## using covr to review code coverage
+
+You can use it from the parent directory without any problem if `covr` is installed there:
+```{r, eval=FALSE}
+covr::package_coverage("folder_name_of_package")
+```
+or to be more fancy
+```{r, eval=FALSE}
+covr::shine(
+    covr::package_coverage(
+        "folder_name_of_package"
+    )
+)
+```
+
+You can also use it from within the package directory.
+```{r, eval=FALSE}
+packrat::with_extlib(
+    'covr',
+    {
+        library(covr)
+        covr::package_coverage()
+    }
+)
+```
+
+However, if I run 
+```{r, eval=FALSE}
+packrat::with_extlib('covr', covr::package_coverage())
+```
+which was my first guess I get the following misterious error message:
+```
+Warning: namespace ‘covr’ is not available and has been replaced
+by .GlobalEnv when processing object ‘FUN.VALUE’
+Error in tally_coverage(x, by = by) : 
+  could not find function "tally_coverage"
+```

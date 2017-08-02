@@ -2,41 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on experiments with R</title>
-    <link>/post/</link>
+    <link>https://czeildi.github.io/post/</link>
     <description>Recent content in Posts on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Aug 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://czeildi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>R pkg development alongside packrat</title>
+      <link>https://czeildi.github.io/2017/08/02/r-pkg-development-alongside-packrat/</link>
+      <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://czeildi.github.io/2017/08/02/r-pkg-development-alongside-packrat/</guid>
+      <description>I use packrat for all my projects at Emarsys so for our internal packages as well as it eases collaboration. During package development there are numerous packages which come handy during development but not needed for usage. These are usually listed under the Suggests or Enhances field in the DESCRIPTION file. But should these be tracked with packrat as well?
+In my opinion, it depends. If it is testthat or roxygen2 probably everyone contributing to the package will use it so it makes sense to track with packrat.</description>
+    </item>
+    
+    <item>
       <title>modals for settings in shiny</title>
-      <link>/2017/06/17/modals-for-settings-in-shiny/</link>
+      <link>https://czeildi.github.io/2017/06/17/modals-for-settings-in-shiny/</link>
       <pubDate>Sat, 17 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/06/17/modals-for-settings-in-shiny/</guid>
+      <guid>https://czeildi.github.io/2017/06/17/modals-for-settings-in-shiny/</guid>
       <description>For some time I have been wondering about the best way to hide more advanced settings from the regular user of your app. I have some apps with many different filters and options, all of which I want to keep because they have their legitimate usage. However, they take up valuable space and also confuse the user who does not need advanced options at the moment.
 I also learned about the possibility of using modals and wondered whether there is a use case waiting to be solved.</description>
     </item>
     
     <item>
       <title>the dot symbol</title>
-      <link>/2017/01/28/the-dot-symbol/</link>
+      <link>https://czeildi.github.io/2017/01/28/the-dot-symbol/</link>
       <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/01/28/the-dot-symbol/</guid>
-      <description>The dot . appears in different places in the R ecosystem: e.g. purrr, magittr’s %&amp;gt;%. I will explore and explain what happens if you mix these usages, or nest them, how the dot symbol is special and how it is not.
+      <guid>https://czeildi.github.io/2017/01/28/the-dot-symbol/</guid>
+      <description>The dot . appears in different places in the R ecosystem: e.g. purrr, magrittr’s %&amp;gt;%. I will explore and explain what happens if you mix these usages, or nest them, how the dot symbol is special and how it is not.
 Basic usage %&amp;gt;% of magrittr You should use the dot if the parameter you pipe forward is not the first parameter of your next function or if you use pipe with data.</description>
     </item>
     
     <item>
       <title>ggplot2: exploration of the group aesthetics</title>
-      <link>/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</link>
+      <link>https://czeildi.github.io/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</link>
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</guid>
+      <guid>https://czeildi.github.io/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</guid>
       <description>I have made several plots with ggplot2 in the past 2 years and occasionally got errors related to the group aesthetics. I solved these issues without once taking the time to fully understand how the group aesthetic works. This blogpost is a result of my experiments to finally explore how it works. My understanding is a combination of my experiments and Hadley Wickhams outstanding book about ggplot2. (https://github.com/hadley/ggplot2-book)
 Scenario 1: mapping based on one variable Our dummy data will be a unit square.</description>
     </item>

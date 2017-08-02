@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shiny on experiments with R</title>
-    <link>/tags/shiny/</link>
+    <link>https://czeildi.github.io/tags/shiny/</link>
     <description>Recent content in Shiny on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://czeildi.github.io/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>modals for settings in shiny</title>
-      <link>/2017/06/17/modals-for-settings-in-shiny/</link>
+      <link>https://czeildi.github.io/2017/06/17/modals-for-settings-in-shiny/</link>
       <pubDate>Sat, 17 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/06/17/modals-for-settings-in-shiny/</guid>
+      <guid>https://czeildi.github.io/2017/06/17/modals-for-settings-in-shiny/</guid>
       <description>For some time I have been wondering about the best way to hide more advanced settings from the regular user of your app. I have some apps with many different filters and options, all of which I want to keep because they have their legitimate usage. However, they take up valuable space and also confuse the user who does not need advanced options at the moment.
 I also learned about the possibility of using modals and wondered whether there is a use case waiting to be solved.</description>
     </item>
