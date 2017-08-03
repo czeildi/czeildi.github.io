@@ -68,10 +68,10 @@
 
     <div class="article-content">
       <p>I use packrat for all my projects at Emarsys so for our internal packages as well as it eases collaboration. During package development there are numerous packages which come handy during development but not needed for usage. These are usually listed under the <code>Suggests</code> or <code>Enhances</code> field in the <code>DESCRIPTION</code> file. <em>But should these be tracked with packrat as well?</em></p>
-<p>In my opinion, it depends. If it is <code>testthat</code> or <code>roxygen2</code> probably everyone contributing to the package will use it so it makes sense to track with packrat. However, if it something only useful for a part of the package or you are experimenting with it like myself with <code>covr</code>, <code>pkgdown</code> or <code>goodpractice</code> it makes sense not to make the project unnecessarily big and slow. In the following I will describe my experiences so far.</p>
+<p>In my opinion, it depends. If it is <code>testthat</code> or <code>roxygen2</code> probably everyone contributing to the package will use it so it makes sense to track with packrat. However, if it is something only useful for a part of the package or you are experimenting with it like myself with <code>covr</code>, <code>pkgdown</code> or <code>goodpractice</code> it makes sense not to make the project unnecessarily big and slow. In the following I will describe my experiences so far.</p>
 <p>What makes all of this possible: the</p>
 <pre class="r"><code>packrat::with_extlib(packages = c(), expr = {})</code></pre>
-<p>command which basically allows you to use a library from outside your poject library temporarily. Though I do not yet understand the subtleties of it, it already proved to be pretty useful.</p>
+<p>command which basically allows you to use a library from outside your project library temporarily. Though I do not yet understand the subtleties of it, it already proved to be pretty useful.</p>
 <div id="using-pkgdown-to-generate-a-static-documentation-site" class="section level2">
 <h2>using pkgdown to generate a static documentation site</h2>
 <p>It seems that <code>with_extlib</code> does not load dependencies of used package so you need to manually add them (at least those for which you get an error otherwise).</p>
@@ -104,7 +104,7 @@ Error: pandoc document conversion failed with error 1</code></pre>
 )</code></pre>
 <p>However, if I run</p>
 <pre class="r"><code>packrat::with_extlib(&#39;covr&#39;, covr::package_coverage())</code></pre>
-<p>which was my first guess I get the following misterious error message:</p>
+<p>which was my first guess I get the following mysterious error message:</p>
 <pre><code>Warning: namespace ‘covr’ is not available and has been replaced
 by .GlobalEnv when processing object ‘FUN.VALUE’
 Error in tally_coverage(x, by = by) : 
