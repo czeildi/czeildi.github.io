@@ -1,0 +1,75 @@
+---
+title: shiny app as R package
+author: Ildi Czeller
+date: '2017-08-09'
+slug: shiny-app-as-r-package
+categories: ["R"]
+tags: ["shiny", "package"]
+---
+
+
+
+<div id="background" class="section level3">
+<h3>Background</h3>
+<p>I love and use shiny regularly and I also try to modularize my work more and more. Naturally I started to wonder whether I could have a whole shiny app as an R package and then possibly a project organizing multiple apps together. The answer is yes as I suspected.</p>
+<p>Several others already wrote about the topic, including <a href="https://www.r-bloggers.com/supplementing-your-r-package-with-a-shiny-app-2/">Dean Attali</a> and <a href="http://will-landau.com/2016/11/01/appPackage/">William Landau</a>. However, I gained a deeper understanding by trying things out myself.</p>
+<p>You have two main options to run a shiny app:</p>
+<ul>
+<li>either launch shiny in a directory with a <code>server.R</code> and <code>ui.R</code> file,</li>
+<li>or launch a shiny object with ui and server parts defined appropriately.</li>
+</ul>
+<p>Until now I always used the first method but to put an app in a package you need the second. This is probably why it took some time for me to understand how a package containing a shiny app can work.</p>
+</div>
+<div id="implementation" class="section level3">
+<h3>Implementation</h3>
+<p>Taking this functional method there is actually no difficulty in putting a shiny app in a package. You define a function for both your ui and server parts and have a function for launching the app which is the only function you need to export from your package.</p>
+<pre class="r"><code>shinypackage_ui &lt;- function() {
+    fluidPage(...)
+}
+
+shinypackage_server &lt;- function(input, output, session) {
+    ...
+}</code></pre>
+<pre class="r"><code>#&#39; @param ... passed to runApp, e.g. port, launch.browser
+#&#39; @export
+runShinyPackageApp &lt;- function(...) {
+    app &lt;- shinyApp(
+        ui = shinypackage_ui(),
+        server = shinypackage_server
+    )
+    runApp(app, ...)
+}</code></pre>
+<p>If you have data loading during runtime or any dependencies outside your package it will work as usual.</p>
+</div>
+<div id="not-using-global.r" class="section level3">
+<h3>(Not) using <code>global.R</code></h3>
+<p>One significant difference between the two methods to run a shiny app is the use of the <code>global.R</code> file. (The <code>onStart</code> param is related but different.) I generally use <code>global.R</code> for the following things:</p>
+<ul>
+<li>source libraries,</li>
+<li>source functions,</li>
+<li>define project-wide constants or load data used in <code>ui</code>,</li>
+<li>define values which may change between launches of the app.</li>
+</ul>
+<p>The first three points are in fact easier and cleaner in a package.</p>
+<ul>
+<li>You can import packages package-wide or for specific functions,</li>
+<li>all functions within package are automatically available to other functions,</li>
+<li>you can use internal data of any kind in your package.</li>
+</ul>
+<p>For the last one instead of declaring global variables (not a good practice anyways) you may pass paramaters to the <code>runShinyPackageApp</code> function which can pass them on to the server and ui, for example:</p>
+<pre class="r"><code>runShinyPackageApp &lt;- function(launch_param = NULL, ...) {
+    app &lt;- shinyApp(
+        ui = shinypackage_ui(launch_param),
+        server = shinypackage_server
+    )
+    runApp(app, ...)
+}</code></pre>
+</div>
+<div id="conclusion" class="section level3">
+<h3>Conclusion</h3>
+<p>I recommend putting shiny apps in R packages but even if I don’t I will use the functional form more as it seems clearer to me now.</p>
+<p>You can see the the whole code on <a href="https://github.com/czeildi/shinypackage">github</a> and try for yourselves with:</p>
+<pre class="r"><code>devtools::install_github(
+    &quot;czeildi/shinypackage&quot;, ref = &quot;v0.1.0&quot;
+)</code></pre>
+</div>

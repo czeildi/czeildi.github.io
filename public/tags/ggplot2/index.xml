@@ -2,21 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ggplot2 on experiments with R</title>
-    <link>https://czeildi.github.io/tags/ggplot2/</link>
+    <link>/tags/ggplot2/</link>
     <description>Recent content in Ggplot2 on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://czeildi.github.io/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>ggplot2 book learnings</title>
+      <link>/page/ggplot2-book-learnings/</link>
+      <pubDate>Sat, 27 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/page/ggplot2-book-learnings/</guid>
+      <description>I have been using ggplot2 quite extensively for two years now but I still learn new things from reading and re-reading Hadley Wickhams’s ggplot2 book. Here are some examples.
+library(&amp;quot;ggplot2&amp;quot;) library(&amp;quot;magrittr&amp;quot;) You not only can have free scales with facetting but also free space. This is especially useful with discrete axis.
+ggplot(mpg, aes(cty, model)) + geom_point() + facet_grid( manufacturer ~ ., space = &amp;quot;free&amp;quot;, scales = &amp;quot;free&amp;quot; ) + theme( strip.</description>
+    </item>
+    
+    <item>
       <title>ggplot2: exploration of the group aesthetics</title>
-      <link>https://czeildi.github.io/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</link>
+      <link>/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</link>
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://czeildi.github.io/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</guid>
+      <guid>/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</guid>
       <description>I have made several plots with ggplot2 in the past 2 years and occasionally got errors related to the group aesthetics. I solved these issues without once taking the time to fully understand how the group aesthetic works. This blogpost is a result of my experiments to finally explore how it works. My understanding is a combination of my experiments and Hadley Wickhams outstanding book about ggplot2. (https://github.com/hadley/ggplot2-book)
 Scenario 1: mapping based on one variable Our dummy data will be a unit square.</description>
     </item>

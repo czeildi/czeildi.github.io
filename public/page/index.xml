@@ -2,21 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on experiments with R</title>
-    <link>https://czeildi.github.io/page/</link>
+    <link>/page/</link>
     <description>Recent content in Pages on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 May 2017 15:32:39 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 27 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://czeildi.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>ggplot2 book learnings</title>
+      <link>/page/ggplot2-book-learnings/</link>
+      <pubDate>Sat, 27 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/page/ggplot2-book-learnings/</guid>
+      <description>I have been using ggplot2 quite extensively for two years now but I still learn new things from reading and re-reading Hadley Wickhams’s ggplot2 book. Here are some examples.
+library(&amp;quot;ggplot2&amp;quot;) library(&amp;quot;magrittr&amp;quot;) You not only can have free scales with facetting but also free space. This is especially useful with discrete axis.
+ggplot(mpg, aes(cty, model)) + geom_point() + facet_grid( manufacturer ~ ., space = &amp;quot;free&amp;quot;, scales = &amp;quot;free&amp;quot; ) + theme( strip.</description>
+    </item>
+    
+    <item>
       <title>About Me</title>
-      <link>https://czeildi.github.io/page/about/</link>
+      <link>/page/about/</link>
       <pubDate>Sat, 20 May 2017 15:32:39 +0200</pubDate>
       
-      <guid>https://czeildi.github.io/page/about/</guid>
+      <guid>/page/about/</guid>
       <description>My name is Ildi Czeller and I work as a Data Scientist at Emarsys in the Budapest office since I graduated as a mathematician from ELTE. Besides my work at Emarsys I am a mentor and organizer at Techcamp. I am also a proud alumna and supporter of The Joy of Thinking Foundation.</description>
     </item>
     

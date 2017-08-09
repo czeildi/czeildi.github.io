@@ -2,75 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on experiments with R</title>
-    <link>https://czeildi.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 Aug 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://czeildi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Covr</title>
-      <link>https://czeildi.github.io/tags/covr/</link>
+      <link>/tags/covr/</link>
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://czeildi.github.io/tags/covr/</guid>
+      <guid>/tags/covr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ggplot2</title>
-      <link>https://czeildi.github.io/tags/ggplot2/</link>
-      <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
+      <link>/tags/ggplot2/</link>
+      <pubDate>Sat, 27 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://czeildi.github.io/tags/ggplot2/</guid>
+      <guid>/tags/ggplot2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Magrittr</title>
-      <link>https://czeildi.github.io/tags/magrittr/</link>
+      <link>/tags/magrittr/</link>
       <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://czeildi.github.io/tags/magrittr/</guid>
+      <guid>/tags/magrittr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Package</title>
+      <link>/tags/package/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/package/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Packrat</title>
-      <link>https://czeildi.github.io/tags/packrat/</link>
+      <link>/tags/packrat/</link>
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://czeildi.github.io/tags/packrat/</guid>
+      <guid>/tags/packrat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pkgdown</title>
-      <link>https://czeildi.github.io/tags/pkgdown/</link>
+      <link>/tags/pkgdown/</link>
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://czeildi.github.io/tags/pkgdown/</guid>
+      <guid>/tags/pkgdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Purrr</title>
-      <link>https://czeildi.github.io/tags/purrr/</link>
+      <link>/tags/purrr/</link>
       <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://czeildi.github.io/tags/purrr/</guid>
+      <guid>/tags/purrr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shiny</title>
-      <link>https://czeildi.github.io/tags/shiny/</link>
-      <pubDate>Sat, 17 Jun 2017 00:00:00 +0000</pubDate>
+      <link>/tags/shiny/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://czeildi.github.io/tags/shiny/</guid>
+      <guid>/tags/shiny/</guid>
       <description></description>
     </item>
     
