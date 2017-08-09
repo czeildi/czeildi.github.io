@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Package on experiments with R</title>
-    <link>/tags/package/</link>
+    <link>https://czeildi.github.io/tags/package/</link>
     <description>Recent content in Package on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Aug 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/package/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://czeildi.github.io/tags/package/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>shiny app as R package</title>
-      <link>/2017/08/09/shiny-app-as-r-package/</link>
+      <link>https://czeildi.github.io/2017/08/09/shiny-app-as-r-package/</link>
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/08/09/shiny-app-as-r-package/</guid>
+      <guid>https://czeildi.github.io/2017/08/09/shiny-app-as-r-package/</guid>
       <description>Background I love and use shiny regularly and I also try to modularize my work more and more. Naturally I started to wonder whether I could have a whole shiny app as an R package and then possibly a project organizing multiple apps together. The answer is yes as I suspected.
 Several others already wrote about the topic, including Dean Attali and William Landau. However, I gained a deeper understanding by trying things out myself.</description>
     </item>

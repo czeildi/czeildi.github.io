@@ -83,6 +83,6 @@ You can see the the whole code on [github](https://github.com/czeildi/shinypacka
 
 ```{r, eval = FALSE}
 devtools::install_github(
-    "czeildi/shinypackage", ref = "v0.1.0"
+    "czeildi/shinypackage", ref = "v0.4.0"
 )
 ```
