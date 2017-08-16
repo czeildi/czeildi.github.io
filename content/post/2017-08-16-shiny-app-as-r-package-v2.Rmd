@@ -1,0 +1,60 @@
+---
+title: shiny app as R package v2
+author: Ildi Czeller
+date: '2017-08-16'
+slug: shiny-app-as-r-package-v2
+categories: ["R"]
+tags: ["shiny", "package"]
+---
+
+In my previous [post](https://www.ildiczeller.com/2017/08/09/shiny-app-as-r-package/) I explored the possibility of wrapping a shiny app as an R package. I falsely stated that you cannot have a directory-based shiny app with `global.R`. Based on [this](https://stackoverflow.com/questions/37830819/developing-shiny-app-as-a-package-and-deploying-it-to-shiny-server) question on Stack Overflow I proved the contrary. It is actually possible but with serious limitations in my opinion so I still strongly advise the function based approach.
+
+You can put basically anything in the `inst` folder of your package and use those as is. I.e. you can put your regular `server.R`, `ui.R` and `global.R` files to `inst` and have an exported launcher function in `R`:
+
+```{r eval = FALSE}
+#' @export
+runShinyPackageApp <- function(...) {
+    shiny::runApp(
+        appDir = system.file(".", package = "shinypackageapp"),
+        ...
+    )
+}
+```
+
+
+## Obstacles I ran into
+
+* You cannot simply use functions from imported packages unless you explicitly call `library(dependecy_package)` in `server.R` or `global.R`.
+* If you create utility functions you cannot used them unless they are exported and you call `library(shinypackageapp)` before `runShinyPackageApp()`.
+* You cannot access internal package data in the `server.R` or `ui.R` files unless you have an exported function to access your package data.
+* You cannot access the file system regularly, if you check the contents of your default folder in `server.R` you will see something similar:
+
+```
+DESCRIPTION
+global.R
+help
+html
+INDEX
+LICENSE
+Meta
+NAMESPACE
+R
+server.R
+ui.R
+```
+
+I suspect this is some kind of temp location of the installed package, certainly not the root folder of my project, neither the root folder of the package as I see it during package development.
+
+All the aboves are due to the fact that these files are not compiled in any way but partly pretend to exist in the folder where you installed the package.
+
+## Conclusion
+
+Besides distribution you loose most of the positive sides of wrapping your app in a package this way.
+
+You can see the the whole code on [github](https://github.com/czeildi/shinypackageapp) and try for yourselves with:
+
+```{r, eval = FALSE}
+devtools::install_github(
+    "czeildi/shinypackageapp", ref = "v0.4.0"
+)
+```
