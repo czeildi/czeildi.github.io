@@ -6,10 +6,19 @@
     <description>Recent content in Tags on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Codeship</title>
+      <link>/tags/codeship/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/codeship/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Covr</title>
@@ -17,6 +26,15 @@
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/covr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/docker/</guid>
       <description></description>
     </item>
     
@@ -41,7 +59,7 @@
     <item>
       <title>Package</title>
       <link>/tags/package/</link>
-      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/package/</guid>
       <description></description>
@@ -50,7 +68,7 @@
     <item>
       <title>Packrat</title>
       <link>/tags/packrat/</link>
-      <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/packrat/</guid>
       <description></description>
