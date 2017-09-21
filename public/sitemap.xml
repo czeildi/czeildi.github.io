@@ -2,136 +2,136 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/2017/09/17/r-pkg-check-with-docker-on-codeship/</loc>
+    <loc>https://czeildi.github.io/2017/09/17/r-pkg-check-with-docker-on-codeship/</loc>
     <lastmod>2017-09-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2017/08/16/shiny-app-as-r-package-v2/</loc>
+    <loc>https://czeildi.github.io/2017/08/16/shiny-app-as-r-package-v2/</loc>
     <lastmod>2017-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2017/08/09/shiny-app-as-r-package/</loc>
+    <loc>https://czeildi.github.io/2017/08/09/shiny-app-as-r-package/</loc>
     <lastmod>2017-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2017/08/02/r-pkg-development-alongside-packrat/</loc>
+    <loc>https://czeildi.github.io/2017/08/02/r-pkg-development-alongside-packrat/</loc>
     <lastmod>2017-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2017/06/17/modals-for-settings-in-shiny/</loc>
+    <loc>https://czeildi.github.io/2017/06/17/modals-for-settings-in-shiny/</loc>
     <lastmod>2017-06-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/page/about/</loc>
+    <loc>https://czeildi.github.io/page/about/</loc>
     <lastmod>2017-05-20T15:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/2017/01/28/the-dot-symbol/</loc>
+    <loc>https://czeildi.github.io/2017/01/28/the-dot-symbol/</loc>
     <lastmod>2017-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</loc>
+    <loc>https://czeildi.github.io/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</loc>
     <lastmod>2017-01-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://czeildi.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/codeship/</loc>
+    <loc>https://czeildi.github.io/tags/codeship/</loc>
     <lastmod>2017-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/covr/</loc>
+    <loc>https://czeildi.github.io/tags/covr/</loc>
     <lastmod>2017-08-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/docker/</loc>
+    <loc>https://czeildi.github.io/tags/docker/</loc>
     <lastmod>2017-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/ggplot2/</loc>
+    <loc>https://czeildi.github.io/tags/ggplot2/</loc>
     <lastmod>2017-01-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/magrittr/</loc>
+    <loc>https://czeildi.github.io/tags/magrittr/</loc>
     <lastmod>2017-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/package/</loc>
+    <loc>https://czeildi.github.io/tags/package/</loc>
     <lastmod>2017-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/packrat/</loc>
+    <loc>https://czeildi.github.io/tags/packrat/</loc>
     <lastmod>2017-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/page/</loc>
+    <loc>https://czeildi.github.io/page/</loc>
     <lastmod>2017-05-20T15:32:39+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/pkgdown/</loc>
+    <loc>https://czeildi.github.io/tags/pkgdown/</loc>
     <lastmod>2017-08-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>https://czeildi.github.io/post/</loc>
     <lastmod>2017-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/purrr/</loc>
+    <loc>https://czeildi.github.io/tags/purrr/</loc>
     <lastmod>2017-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
+    <loc>https://czeildi.github.io/categories/r/</loc>
     <lastmod>2017-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/shiny/</loc>
+    <loc>https://czeildi.github.io/tags/shiny/</loc>
     <lastmod>2017-08-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://czeildi.github.io/tags/</loc>
     <lastmod>2017-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://czeildi.github.io/</loc>
     <lastmod>2017-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

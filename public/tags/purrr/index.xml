@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Purrr on experiments with R</title>
-    <link>/tags/purrr/</link>
+    <link>https://czeildi.github.io/tags/purrr/</link>
     <description>Recent content in Purrr on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 28 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/purrr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://czeildi.github.io/tags/purrr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>the dot symbol</title>
-      <link>/2017/01/28/the-dot-symbol/</link>
+      <link>https://czeildi.github.io/2017/01/28/the-dot-symbol/</link>
       <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/01/28/the-dot-symbol/</guid>
+      <guid>https://czeildi.github.io/2017/01/28/the-dot-symbol/</guid>
       <description>The dot . appears in different places in the R ecosystem: e.g. purrr, magrittr’s %&amp;gt;%. I will explore and explain what happens if you mix these usages, or nest them, how the dot symbol is special and how it is not.
 Basic usage %&amp;gt;% of magrittr You should use the dot if the parameter you pipe forward is not the first parameter of your next function or if you use pipe with data.</description>
     </item>

@@ -115,29 +115,29 @@ ADD . /rpkg</code></pre>
 </div>
 <div id="dependencies" class="section level3">
 <h3>Dependencies</h3>
-<p>Dependencies needed for devtools, knitr, roxygen2:</p>
+<p>Dependencies needed for <code>devtools</code>, <code>knitr</code>, <code>roxygen2</code>:</p>
 <ul>
-<li>libcurl4-openssl-dev</li>
-<li>zlib1g-dev</li>
-<li>libssl-dev</li>
-<li>libxml2-dev</li>
+<li><code>libcurl4-openssl-dev</code></li>
+<li><code>zlib1g-dev</code></li>
+<li><code>libssl-dev</code></li>
+<li><code>libxml2-dev</code></li>
 </ul>
 <p>Custom dependencies:</p>
 <ul>
-<li>libmariadb-client-lgpl-dev (for RMySQL)</li>
-<li>libpq-dev (RPostgreSQL)</li>
-<li>pandoc (rmarkdown v2)</li>
-<li>pandoc-citeproc (rmarkdown v2)</li>
-<li>qpdf (vignette pdf check ?)</li>
+<li><code>libmariadb-client-lgpl-dev</code> (for RMySQL)</li>
+<li><code>libpq-dev</code> (RPostgreSQL)</li>
+<li><code>pandoc</code> (rmarkdown v2)</li>
+<li><code>pandoc-citeproc</code> (rmarkdown v2)</li>
+<li><code>qpdf</code> (vignette pdf check ?)</li>
 </ul>
-<p>The so called <a href="https://stackoverflow.com/questions/9700799/what-is-difference-between-r-base-and-r-recommended-packages">recommended packages</a> are usually installed alongside R and not necessarily show up in the packrat <code>Requires</code> field which can cause surprises as <code>rocker/verse</code> does not installs them. So far we needed MASS for ggplot2 and lattice for zoo. We installed these before packrat bootstrap with <code>RUN R -e &quot;install.packages(&quot;MASS&quot;)</code>.</p>
+<p>The so called <a href="https://stackoverflow.com/questions/9700799/what-is-difference-between-r-base-and-r-recommended-packages">recommended packages</a> are usually installed alongside R and not necessarily show up in the packrat <code>Requires</code> field which can cause surprises as <code>rocker/verse</code> does not install them. So far we needed <code>MASS</code> for <code>ggplot2</code> and <code>lattice</code> for <code>zoo</code>. We installed these before packrat bootstrap with <code>RUN R -e &quot;install.packages(&quot;MASS&quot;)</code>.</p>
 </div>
 </div>
 <div id="future" class="section level2">
 <h2>Future</h2>
 <p>The next step is to build an actual pipeline: after checking and building our R package we should push to our internal <a href="https://github.com/eddelbuettel/drat">drat</a> repository (triggered by a release tag).</p>
 <p>We could also build a Docker image based on <a href="https://hub.docker.com/r/rocker/verse/">rocker/verse</a> to contain the system dependencies we need to check most of our packages.</p>
-<p>We will think about installing recommended packages always or part of the base Docker image.</p>
+<p>We will think about installing recommended packages always in the Dockerfile or choose a different base Docker image containing them.</p>
 </div>
 
     </div>

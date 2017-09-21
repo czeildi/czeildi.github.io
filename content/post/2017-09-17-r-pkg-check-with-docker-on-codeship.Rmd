@@ -9,7 +9,7 @@ tags: ["packrat", "Docker", "codeship", "package"]
 
 ## Motivation
 
-At [Emarsys](https://www.emarsys.com/en-uk/) we have several internal  private R packages which are essential to our day-to-day work. They are also under constant development. We want to work on these in a collaborative and safe way. Fast and trustworthy CI & CD are essential: they reduce the cost and risk of adding a small but useful feature to one of our packages.
+At [Emarsys](https://www.emarsys.com/en-uk/) we have several internal private R packages which are essential to our day-to-day work. They are also under constant development. We want to work on these in a collaborative and safe way. Fast and trustworthy CI & CD are essential: they reduce the cost and risk of adding a small but useful feature to one of our packages.
 
 Although in the R community [Travis](https://travis-ci.org/) is the standard for CI, at Emarsys the whole company uses Codeship happily so we wanted to give it a go.
 
@@ -71,22 +71,22 @@ After installing packages we can move the rest of our repository to the docker i
 
 ### Dependencies
 
-Dependencies needed for devtools, knitr, roxygen2:
+Dependencies needed for `devtools`, `knitr`, `roxygen2`:
 
-* libcurl4-openssl-dev
-* zlib1g-dev
-* libssl-dev
-* libxml2-dev
+* `libcurl4-openssl-dev`
+* `zlib1g-dev`
+* `libssl-dev`
+* `libxml2-dev`
 
 Custom dependencies:
 
-* libmariadb-client-lgpl-dev (for RMySQL)
-* libpq-dev (RPostgreSQL)
-* pandoc (rmarkdown v2)
-* pandoc-citeproc (rmarkdown v2)
-* qpdf (vignette pdf check ?)
+* `libmariadb-client-lgpl-dev` (for RMySQL)
+* `libpq-dev` (RPostgreSQL)
+* `pandoc` (rmarkdown v2)
+* `pandoc-citeproc` (rmarkdown v2)
+* `qpdf` (vignette pdf check ?)
 
-The so called [recommended packages](https://stackoverflow.com/questions/9700799/what-is-difference-between-r-base-and-r-recommended-packages) are usually installed alongside R and not necessarily show up in the packrat `Requires` field which can cause surprises as `rocker/verse` does not installs them. So far we needed MASS for ggplot2 and lattice for zoo. We installed these before packrat bootstrap with `RUN R -e "install.packages("MASS")`.
+The so called [recommended packages](https://stackoverflow.com/questions/9700799/what-is-difference-between-r-base-and-r-recommended-packages) are usually installed alongside R and not necessarily show up in the packrat `Requires` field which can cause surprises as `rocker/verse` does not install  them. So far we needed `MASS` for `ggplot2` and `lattice` for `zoo`. We installed these before packrat bootstrap with `RUN R -e "install.packages("MASS")`.
 
 
 ## Future
@@ -95,4 +95,4 @@ The next step is to build an actual pipeline: after checking and building our R 
 
 We could also build a Docker image based on [rocker/verse](https://hub.docker.com/r/rocker/verse/) to contain the system dependencies we need to check most of our packages.
 
-We will think about installing recommended packages always or part of the base Docker image.
+We will think about installing recommended packages always in the Dockerfile or choose a different base Docker image containing them.
