@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.20.7" />
+
+
+<title>modals for settings in shiny - experiments with R</title>
+<meta property="og:title" content="modals for settings in shiny - experiments with R">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="../../../../page/about/">About</a></li>
+    
+    <li><a href="../../../../post/">Blog</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">2 min read</span>
+    
+
+    <h1 class="article-title">modals for settings in shiny</h1>
+
+    
+    <span class="article-date">2017/06/17</span>
+    
+
+    <div class="article-content">
+      <p>For some time I have been wondering about the best way to hide more advanced settings from the regular user of your app. I have some apps with many different filters and options, all of which I want to keep because they have their legitimate usage. However, they take up valuable space and also confuse the user who does not need advanced options at the moment.</p>
+<p>I also learned about the possibility of using modals and wondered whether there is a use case waiting to be solved.</p>
+<p>I came up with using modals to only show advanced options on request. I am not perfectly happy with the solution, however I learned a lot from doing it so I decided to share it.</p>
+<p>I built a dead simple shiny app which you can find here alongside the code: <a href="https://ildi-czeller.shinyapps.io/persistent_modal/">persistent modal shiny example</a>.</p>
+<p>The most important thing to solve was to keep the set values of advanced options between reopenings of the modal. I solved this with reactive values.</p>
+<p>What I did not manage to solve was to apply those advanced options if and only if the user explicitly asks for applying them. I can either change them upon every modification, or upon opening the modal or pressing the apply button. But this is good enough for now. Any suggestions are welcome.</p>
+
+    </div>
+  </article>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var d = document, s = d.createElement('script');
+    s.src = '//ildiczeller.disqus.com/embed.js'; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+              <a href = "https://github.com/czeildi">
+                   <img src="../../../../images/github-logo.png" width="22" height="22">
+              </a>
+          </li>
+          <li>
+              <a href = "https://twitter.com/czeildi">
+                  <img src="../../../../images/twitter-logo.png" width="22" height="22">
+              </a>
+          </li>
+          <li>
+              <a href = "https://www.linkedin.com/in/ildiko-czeller-310465a7">
+                  <img src="../../../../images/linkedin-logo.png" width="22" height="22">
+              </a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+
+    
+  </body>
+</html>
+
