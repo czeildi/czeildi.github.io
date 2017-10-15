@@ -1,0 +1,111 @@
+---
+title: custom ggplot2 theme
+author: Ildi Czeller
+date: '2017-10-15'
+slug: custom-ggplot2-theme
+categories: ["R"]
+tags: ["ggplot2", "ggthemr", "visualization"]
+---
+
+
+
+<p>I spoke about custom ggplot2 themes at the last <a href="https://www.meetup.com/Budapest-Users-of-R-Network/events/243298698/">BURN meetup</a>. My slides are available <a href="http://slides.com/czeildi/burn-custom-ggplot2-theme#/">here</a> but I will give you a somewhat extended summary here. A custom theme could come in handy both in academia and industry to ensure a consistent style.</p>
+<div id="motivation" class="section level2">
+<h2>Motivation</h2>
+<p>As easy as it is to generate meaningful and complex charts with ggplot2 it can be tedious to control every detail of your chart to make it publication-ready. There are several alternative themes out there (e.g. excel style, Simpson style etc.) At Emarsys we wanted to have a theme with Emarsys colors and our own font so just using an existing theme was not enough. We spent quite of a lot of time on setting colors manually for analysis we sent to our clients. However, creating these plots were not only tedious but error-prone and they still lacked full consistency. So we looked for an easy way to modify the default ggplot2 theme.</p>
+<p>By theme I actually mean three different components:</p>
+<ul>
+<li>color palette</li>
+<li>font</li>
+<li>theme (in ggplot2 sense, like <code>theme_bw</code>).</li>
+</ul>
+<p>For a simple example data and base plot we will shorten our code from this:</p>
+<pre class="r"><code>our_ggplot + 
+    scale_fill_manual(values = c(&quot;treatment&quot; = &quot;#377EB8&quot;,
+                                 &quot;control&quot; = &quot;#E41A1C&quot;)) + 
+    geom_label(
+        aes(label = revenue),
+        position = position_dodge(width = 0.9),
+        family = &quot;Canaro Medium&quot;
+    ) + 
+    theme_bw(base_family = &quot;Canaro Medium&quot;) + 
+    theme(legend.position = &quot;bottom&quot;)</code></pre>
+<p><img src="/post/2017-10-15-custom-ggplot2-theme_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>to this:</p>
+<pre class="r"><code>set_our_theme()
+our_ggplot</code></pre>
+</div>
+<div id="specifics" class="section level2">
+<h2>Specifics</h2>
+<p>For defining a color palette we used the great <code>ggthemr</code> package.</p>
+<pre class="r"><code>get_theme_palette &lt;- function() {
+
+    ggthemr::define_palette(
+        swatch = c(&quot;#000000&quot;,
+                   &quot;#377EB8&quot;, &quot;#E41A1C&quot;, &quot;#4DAF4A&quot;, &quot;#984EA3&quot;,
+                   &quot;#FF7F00&quot;, &quot;#FFFF33&quot;, &quot;#A65628&quot;, &quot;#F781BF&quot;),
+        gradient = c(lower = &quot;#377EB8&quot;, upper = &quot;#E41A1C&quot;)
+    )
+    
+}</code></pre>
+<p>The swatch is for controlling discrete color scales (next <em>n</em> after first is used if <em>n</em> colors are needed) and the gradient is for continuous color scales. Using this theme if more discrete colors are needed than colors given will result in an error.</p>
+<p>You can set a theme with base font size and base font family inside ggplot2, you do not need ggthemr for this.</p>
+<pre class="r"><code>theme_our &lt;- function(base_size = 13) {
+
+    theme_bw(base_size, base_family = &quot;Canaro Medium&quot;) +
+        theme(legend.position = &quot;bottom&quot;)
+        
+}</code></pre>
+<p>However, the font family defined in a <code>theme</code> call won’t have effect on texts drawn by <code>geom_text</code> or <code>geom_label</code> so we have to address these separately.</p>
+<pre class="r"><code>update_font_defaults &lt;- function() {
+
+    update_geom_defaults(&quot;text&quot;, list(family = &quot;Canaro Medium&quot;))
+    update_geom_defaults(&quot;label&quot;, list(family = &quot;Canaro Medium&quot;))
+    
+}</code></pre>
+<p>Now the theme setter simply calls these three functions.</p>
+<pre class="r"><code>set_our_theme &lt;- function(base_size = 13)  {
+
+    ggthemr::ggthemr(get_theme_palette())
+    
+    theme_set(theme_our(base_size = base_size))
+    
+    update_font_defaults()
+    
+}</code></pre>
+<div id="color-palette-in-action" class="section level3">
+<h3>Color palette in action</h3>
+<pre class="r"><code>set_our_theme()</code></pre>
+<div id="discrete-scale" class="section level4">
+<h4>Discrete scale:</h4>
+<pre class="r"><code>ggplot(data.table(x = as.character(1:7), y = 1), aes(x, y, fill = x)) + 
+    geom_col()</code></pre>
+<p><img src="/post/2017-10-15-custom-ggplot2-theme_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>Using this theme if more discrete colors are needed than colors given will result in an error. You may add <code>scale_fill_hue</code> to fall back to default coloring.</p>
+<pre class="r"><code>ggplot(data.table(x = as.character(1:12), y = 1), aes(x, y, fill = x)) + 
+    geom_col() + 
+    scale_fill_hue()</code></pre>
+<p><img src="/post/2017-10-15-custom-ggplot2-theme_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+</div>
+<div id="continuous-scale" class="section level4">
+<h4>Continuous scale:</h4>
+<pre class="r"><code>ggplot(data.table(x = 1:100, y = 1), aes(x, y, fill = x)) + 
+    geom_col()</code></pre>
+<p><img src="/post/2017-10-15-custom-ggplot2-theme_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>You may wonder what is the first color in the swatch is used for: some geoms like boxplot have a default color which would be probably strange being too colorful, at these places this first color is used (box outline, outliers etc.)</p>
+<p><img src="/post/2017-10-15-custom-ggplot2-theme_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+</div>
+</div>
+<div id="reset-the-theme" class="section level3">
+<h3>reset the theme</h3>
+<p>If you want to switch-off or change themes within an R session you can do so easily. However a use-case hasn’t actually come up for us yet.</p>
+<pre class="r"><code>ggthemr::ggthemr_reset()
+
+our_ggplot</code></pre>
+<p><img src="/post/2017-10-15-custom-ggplot2-theme_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+</div>
+</div>
+<div id="conclusions" class="section level2">
+<h2>Conclusions</h2>
+<p>It became so easy to make our plots Emarsys-themed that now we use it by default for exploratory, internal plots as well. What we sometimes miss is an easy way to use a similar theme with plotly as well.</p>
+</div>
