@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/czeildi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.ildiczeller.com
+  * I am czeildi (https://keybase.io/czeildi) on keybase.
+  * I have a public key with fingerprint A537 922E D022 E04B F8AD  3194 B0A0 E71D 03BF 77B4
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012098c70715da2116a5d35218558098c75abbb1645e9903b21f946f31a61a69c8410a",
+      "fingerprint": "a537922ed022e04bf8ad3194b0a0e71d03bf77b4",
+      "host": "keybase.io",
+      "key_id": "b0a0e71d03bf77b4",
+      "kid": "01011f5047ddd58a36d9035efa6facccbd44cef90d17bef2118c48744102fb896c320a",
+      "uid": "5fb744e493511d62fa0a7588e78f9719",
+      "username": "czeildi"
+    },
+    "service": {
+      "hostname": "www.ildiczeller.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1509102906,
+  "expire_in": 157680000,
+  "prev": "84e0c8e9382d3af6f818049bb38d7b4fb3eff3a642f12dfaffb4331bc2d95985",
+  "seqno": 13,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMN1AnicbZJ7TBRHHMcPAW2vQUC4ilqTsrRJ25y4z9vdS0VEEFqNFNpqQcuxuzML
+y+P2nsC1PIqgAdJio9I2CgKSaINYD6rWQuRx0tiUxArY1gIibcmpQSEVEvog2LmL
+/tfJZH6Zme/vM9/fLzMYEqjRBrhb7m4M7Cu+EDA0cNKpyZjXGT/ERBW4MBTzoT/A
+AgDtDlO+AjAjhhMkznMSi7MEAwSSIAwCAyiGJDiG4fw3jCCKImGgGcjzOCWShMzT
+BpkiBAOavMTRBC5gekxWzDnQZrEpZgfCCgzF8iQJAY4WnBZlTgAUwdMiLuCQJQAC
+ySwr0igxV7X7MpA5UbDDWEVFZ2hj8tv7H/1T3zhByAxOswAAhhMoA0DuGCgLBlmQ
+JEkENC1BmccBwYpQRoVxEs2xNHJLyiLHGySK9Pt2+nGMLKI7SPMUQxDAQMoCLrAM
+x0GWk3mW4H1CO7SZhUKI1NIHUCkAClamx9BhkSJBX199hTwRFBcXx/oUSFhQAG2x
+klqICBab6lAltQAJch0Oi93oAzhcFn8GFE1PWCZRMQPUTZRRBG12RTVjRgIpJYfi
+gxMMzqMieNygx2CJRbFBk+JTMKyBw9HwvQOLEJKjIS5xkKc4ElCCbJA5gsNpXhQp
+DqBWyiIFZZkSDDQpEySQBVkWaYoiRIkEPMNzDOarzmpWEZtCPoUcxLQrOWbB4bRB
+rMwzsD9IE6DVrAxe4ftmGu2zYU8/X7c79PHulIjBSG8NZhSm7ruiQ0JCq/jm3uO3
+P7kl9sSMXu9cXzHp6sIOHk0KH/hH0zR1I+7go+V7bXXPrN+SYUnzNH6/sGHiTOa1
+PavWVkdV8RObm6vdoYe/3burFqxzOUtfMcstYK52+nyNczJMMLYcSbWwFy9+vlMz
+NOIWTqjtP+ZW6X8tja/Ky77cufr5re1hw322Tbal2c185J/9M/td6WN1uhZa94Ou
+obVvcCg/Q/f4ZNJXNcrSNuuqKmpN192m2amuzBTtG7cLL7zU4Mm+XDORfGJ3NFO2
+raM1vkG9Yl+yq0OL+Fl99YtNEZpr7Vlpexn3DsdoQmRQcMRpR/7WY3+Fu7uudLwa
+WhcbXgIHPD/FzY6Vx2R/XV/XWG6qnzvTH/B6RYXX+9mDU/PT1of/7lv990eJhbvS
+xpm1bcPjHVav+ntiymvPJfWWvnNALH+/e+TlylR95du/UZO66eaF+4c/vnT1PUti
++BfJOcfGjFffivG+u+fnTaO0Zy4ruudcRPZC+gqLczn3oSfqzmJcvY6Oz0u/vni8
+59C5vAPrPNHdpo2nZrK8KQk7jkjWriCgTW48Xdb6S2dfb9uhyu1/zC+PrhGDdy6Y
+L60YuZd5/tN9kzOLNiszXP3guw0wi6398tZoyZbGmvS8pOI3tZU3k0JeSFg5frTi
+m0D3zTsJUd2P+s9q+wfyUm9s/w/uqcV2
+=Kofg
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/czeildi
+
+==================================================================
