@@ -9,11 +9,24 @@ My name is Ildi Czeller and I work as a Data Scientist at [Emarsys](https://www.
 
 ### Talks
 
-* [BURN meetup 2017 October: custom ggplot2 theme](https://www.meetup.com/Budapest-Users-of-R-Network/events/243298698/)
-* [RLadies meetup 2017 September: shiny introduction](https://www.meetup.com/R-Ladies-Budapest/events/242934542/)
-* [RLadies meetup 2017 June: shiny introduction](https://www.meetup.com/R-Ladies-Budapest/events/240631884/)
-* [Startup Safary Budapest 2017 April](http://budapest.startupsafary.com/sessions/38409_szemelyreszabott_uzenetkuldesi_id_optimalizalas_egy_data_science_projekt_lepesei_a_tol_z_ig)
-* [BURN meetup 2016 December: shiny modules](https://www.meetup.com/Budapest-Users-of-R-Network/events/235728423/)
+* Budapest BI Forum conference 2017 November: Message send time optimization
+    * [slides](https://github.com/czeildi/budapestbi-2017-slides)
+    * [conference page](http://budapestbiforum.hu/2017/hu/eloadasok/making-email-campaigns-more-effective-send-time-optimization-czeller-ildiko-emarsys-technologies-kft/)
+* BURN meetup 2017 October: custom ggplot2 theme
+    * [slides](http://slides.com/czeildi/burn-custom-ggplot2-theme#/)
+    * [meetup page](https://www.meetup.com/Budapest-Users-of-R-Network/events/243298698/)
+* RLadies meetup 2017 September: shiny introduction
+    * [materials](https://github.com/rladies/meetup-presentations_budapest)
+    * [meetup page](https://www.meetup.com/R-Ladies-Budapest/events/242934542/)
+* RLadies meetup 2017 June: shiny introduction
+    * [materials](https://github.com/rladies/meetup-presentations_budapest)
+    * [meetup page](https://www.meetup.com/R-Ladies-Budapest/events/240631884/)
+* Startup Safary Budapest 2017 April
+    * [slides](http://slides.com/czeildi/startup-safari-send-time-optimization#/)
+    * [conference page](http://budapest.startupsafary.com/sessions/38409_szemelyreszabott_uzenetkuldesi_id_optimalizalas_egy_data_science_projekt_lepesei_a_tol_z_ig)
+* BURN meetup 2016 December: shiny modules
+    * [materials](https://github.com/czeildi/burn-meetup-shiny-modules)
+    * [meetup page](https://www.meetup.com/Budapest-Users-of-R-Network/events/235728423/)
 
 ### Publications
 
