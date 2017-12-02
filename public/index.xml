@@ -6,10 +6,21 @@
     <description>Recent content on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>merge on factor column</title>
+      <link>/2017/11/30/merge-on-factor-column/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/11/30/merge-on-factor-column/</guid>
+      <description>library(&amp;quot;forcats&amp;quot;) library(&amp;quot;data.table&amp;quot;) library(&amp;quot;magrittr&amp;quot;) I recently started working with factors in R and found the forcats package amazing. However, I did not found much documentation on merging two data frames on a factor column so I made small examples and observed the behavior.
+same levels, different order In abc order: natural if converting from already ordered character.
+dt_abc &amp;lt;- data.table(size = as_factor(c(&amp;quot;big&amp;quot;, &amp;quot;medium&amp;quot;, &amp;quot;tiny&amp;quot;))) levels(dt_abc$size) ## [1] &amp;quot;big&amp;quot; &amp;quot;medium&amp;quot; &amp;quot;tiny&amp;quot; We can define the natural order:</description>
+    </item>
     
     <item>
       <title>custom ggplot2 theme</title>
@@ -78,7 +89,7 @@ I also learned about the possibility of using modals and wondered whether there 
       
       <guid>/page/about/</guid>
       <description> My name is Ildi Czeller and I work as a Data Scientist at Emarsys in the Budapest office since I graduated as a mathematician from ELTE. Besides my work at Emarsys I am a mentor and organizer at Techcamp. I am also a proud alumna and supporter of The Joy of Thinking Foundation.
-List of talks and publications Talks  BURN meetup 2017 October: custom ggplot2 theme RLadies meetup 2017 September: shiny introduction RLadies meetup 2017 June: shiny introduction Startup Safary Budapest 2017 April BURN meetup 2016 December: shiny modules  Publications  Weekend bias in send time optimisation  </description>
+List of talks and publications Talks  Budapest BI Forum conference 2017 November: Message send time optimization  slides conference page  BURN meetup 2017 October: custom ggplot2 theme  slides meetup page  RLadies meetup 2017 September: shiny introduction  materials meetup page  RLadies meetup 2017 June: shiny introduction  materials meetup page  Startup Safary Budapest 2017 April  slides conference page  BURN meetup 2016 December: shiny modules  materials meetup page   Publications  Weekend bias in send time optimisation  </description>
     </item>
     
     <item>

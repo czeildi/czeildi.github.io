@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2017/11/30/merge-on-factor-column/</loc>
+    <lastmod>2017-11-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2017/10/15/custom-ggplot2-theme/</loc>
     <lastmod>2017-10-15T00:00:00+00:00</lastmod>
   </url>
@@ -70,6 +75,12 @@
   </url>
   
   <url>
+    <loc>/tags/forcats/</loc>
+    <lastmod>2017-11-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/ggplot2/</loc>
     <lastmod>2017-10-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -113,7 +124,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-10-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -125,7 +136,7 @@
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2017-10-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -149,7 +160,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-10-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

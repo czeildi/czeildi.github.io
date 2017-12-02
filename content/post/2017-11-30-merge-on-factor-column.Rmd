@@ -1,0 +1,83 @@
+---
+title: merge on factor column
+author: Ildi Czeller
+date: '2017-11-30'
+slug: merge-on-factor-column
+categories: ["R"]
+tags: ["forcats"]
+---
+
+```{r setup, echo =FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+
+
+```{r}
+library("forcats")
+library("data.table")
+library("magrittr")
+```
+
+I recently started working with factors in R and found the forcats package amazing. However, I did not found much documentation on merging two data frames on a factor column so I made small examples and observed the behavior.
+
+## same levels, different order
+
+In abc order: natural if converting from already ordered character.
+
+```{r}
+dt_abc <- data.table(size = as_factor(c("big", "medium", "tiny")))
+levels(dt_abc$size)
+```
+
+We can define the natural order: 
+```{r}
+dt_lg <- data.table(size = fct_reorder(as_factor(c("big", "medium", "tiny")), c(3, 2, 1)))
+levels(dt_lg$size)
+```
+
+```{r}
+merge(dt_abc, dt_lg, by = "size") %T>%
+{print(levels(.$size))}
+```
+```{r}
+merge(dt_lg, dt_abc, by = "size") %T>%
+    {print(levels(.$size))}
+```
+
+From this it seems that with merge the left table has precedence.
+
+## different levels
+
+```{r}
+dt_abc <- data.table(size = as_factor(c("big", "medium", "small", "tiny")))
+dt_lg <- data.table(size = fct_reorder(as_factor(c("big", "medium", "tiny")), c(3, 2, 1)))
+```
+
+```{r}
+merge(dt_abc, dt_lg, by = "size", all = TRUE) %T>%
+    {print(levels(.$size))}
+```
+
+```{r}
+merge(dt_lg, dt_abc, by = "size", all = TRUE) %T>%
+    {print(levels(.$size))}
+```
+In this case the levels of the factors in the two table are concatenated: first left then right.
+
+## merge factor with character
+
+```{r}
+dt_chr <- data.table(size = c("big", "medium", "tiny"))
+dt_fct <- data.table(size = fct_reorder(as_factor(c("big", "medium", "tiny")), c(3, 2, 1)))
+```
+
+```{r}
+merge(dt_fct, dt_chr, by = "size") %T>%
+    {print(levels(.$size))}
+```
+```{r}
+merge(dt_chr, dt_fct, by = "size") %T>%
+    {print(levels(.$size))}
+```
+
+From this it seems that in this case the right side of the join has precedence.

@@ -1,0 +1,83 @@
+---
+title: merge on factor column
+author: Ildi Czeller
+date: '2017-11-30'
+slug: merge-on-factor-column
+categories: ["R"]
+tags: ["forcats"]
+---
+
+
+
+<pre class="r"><code>library(&quot;forcats&quot;)
+library(&quot;data.table&quot;)
+library(&quot;magrittr&quot;)</code></pre>
+<p>I recently started working with factors in R and found the forcats package amazing. However, I did not found much documentation on merging two data frames on a factor column so I made small examples and observed the behavior.</p>
+<div id="same-levels-different-order" class="section level2">
+<h2>same levels, different order</h2>
+<p>In abc order: natural if converting from already ordered character.</p>
+<pre class="r"><code>dt_abc &lt;- data.table(size = as_factor(c(&quot;big&quot;, &quot;medium&quot;, &quot;tiny&quot;)))
+levels(dt_abc$size)</code></pre>
+<pre><code>## [1] &quot;big&quot;    &quot;medium&quot; &quot;tiny&quot;</code></pre>
+<p>We can define the natural order:</p>
+<pre class="r"><code>dt_lg &lt;- data.table(size = fct_reorder(as_factor(c(&quot;big&quot;, &quot;medium&quot;, &quot;tiny&quot;)), c(3, 2, 1)))
+levels(dt_lg$size)</code></pre>
+<pre><code>## [1] &quot;tiny&quot;   &quot;medium&quot; &quot;big&quot;</code></pre>
+<pre class="r"><code>merge(dt_abc, dt_lg, by = &quot;size&quot;) %T&gt;%
+{print(levels(.$size))}</code></pre>
+<pre><code>## [1] &quot;big&quot;    &quot;medium&quot; &quot;tiny&quot;</code></pre>
+<pre><code>##      size
+## 1:    big
+## 2: medium
+## 3:   tiny</code></pre>
+<pre class="r"><code>merge(dt_lg, dt_abc, by = &quot;size&quot;) %T&gt;%
+    {print(levels(.$size))}</code></pre>
+<pre><code>## [1] &quot;tiny&quot;   &quot;medium&quot; &quot;big&quot;</code></pre>
+<pre><code>##      size
+## 1:   tiny
+## 2: medium
+## 3:    big</code></pre>
+<p>From this it seems that with merge the left table has precedence.</p>
+</div>
+<div id="different-levels" class="section level2">
+<h2>different levels</h2>
+<pre class="r"><code>dt_abc &lt;- data.table(size = as_factor(c(&quot;big&quot;, &quot;medium&quot;, &quot;small&quot;, &quot;tiny&quot;)))
+dt_lg &lt;- data.table(size = fct_reorder(as_factor(c(&quot;big&quot;, &quot;medium&quot;, &quot;tiny&quot;)), c(3, 2, 1)))</code></pre>
+<pre class="r"><code>merge(dt_abc, dt_lg, by = &quot;size&quot;, all = TRUE) %T&gt;%
+    {print(levels(.$size))}</code></pre>
+<pre><code>## [1] &quot;big&quot;    &quot;medium&quot; &quot;small&quot;  &quot;tiny&quot;</code></pre>
+<pre><code>##      size
+## 1:    big
+## 2: medium
+## 3:  small
+## 4:   tiny</code></pre>
+<pre class="r"><code>merge(dt_lg, dt_abc, by = &quot;size&quot;, all = TRUE) %T&gt;%
+    {print(levels(.$size))}</code></pre>
+<pre><code>## [1] &quot;tiny&quot;   &quot;medium&quot; &quot;big&quot;    &quot;small&quot;</code></pre>
+<pre><code>##      size
+## 1:   tiny
+## 2: medium
+## 3:    big
+## 4:  small</code></pre>
+<p>In this case the levels of the factors in the two table are concatenated: first left then right.</p>
+</div>
+<div id="merge-factor-with-character" class="section level2">
+<h2>merge factor with character</h2>
+<pre class="r"><code>dt_chr &lt;- data.table(size = c(&quot;big&quot;, &quot;medium&quot;, &quot;tiny&quot;))
+dt_fct &lt;- data.table(size = fct_reorder(as_factor(c(&quot;big&quot;, &quot;medium&quot;, &quot;tiny&quot;)), c(3, 2, 1)))</code></pre>
+<pre class="r"><code>merge(dt_fct, dt_chr, by = &quot;size&quot;) %T&gt;%
+    {print(levels(.$size))}</code></pre>
+<pre><code>## NULL</code></pre>
+<pre><code>##      size
+## 1:    big
+## 2: medium
+## 3:   tiny</code></pre>
+<pre class="r"><code>merge(dt_chr, dt_fct, by = &quot;size&quot;) %T&gt;%
+    {print(levels(.$size))}</code></pre>
+<pre><code>## [1] &quot;big&quot;    &quot;medium&quot; &quot;tiny&quot;</code></pre>
+<pre><code>##      size
+## 1:    big
+## 2: medium
+## 3:   tiny</code></pre>
+<p>From this it seems that in this case the right side of the join has precedence.</p>
+</div>

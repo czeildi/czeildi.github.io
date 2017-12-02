@@ -1,0 +1,33 @@
+---
+title: purrr examples
+author: Ildi Czeller
+date: '2017-11-04'
+slug: purrr-examples
+categories: ["R"]
+tags: ["purrr"]
+---
+
+
+### map2
+
+### map_if
+
+### map_chr, map_int, map_dbl, map_lgl
+
+### reduce
+
+### pluck
+
+### keep & discard
+
+### imap & iwalk
+
+### invoke
+
+### lift
+
+### partial
+
+### %||%
+
+### safely, possibly, quietly
