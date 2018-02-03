@@ -6,6 +6,12 @@ categories: ["R"]
 tags: ["ggplot2"]
 ---
 
+---
+output: 
+  html_document:
+    css: styles.css
+---
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 ```

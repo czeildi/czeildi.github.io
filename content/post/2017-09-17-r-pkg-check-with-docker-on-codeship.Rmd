@@ -7,6 +7,12 @@ categories: ["R"]
 tags: ["packrat", "Docker", "codeship", "package"]
 ---
 
+---
+output: 
+  html_document:
+    css: styles.css
+---
+
 ## Motivation
 
 At [Emarsys](https://www.emarsys.com/en-uk/) we have several internal private R packages which are essential to our day-to-day work. They are also under constant development. We want to work on these in a collaborative and safe way. Fast and trustworthy CI & CD are essential: they reduce the cost and risk of adding a small but useful feature to one of our packages.

@@ -7,6 +7,12 @@ categories: ["R"]
 tags: ["ggplot2", "ggthemr", "visualization"]
 ---
 
+---
+output: 
+  html_document:
+    css: styles.css
+---
+
 I spoke about custom ggplot2 themes at the last [BURN meetup](https://www.meetup.com/Budapest-Users-of-R-Network/events/243298698/). My slides are available [here](http://slides.com/czeildi/burn-custom-ggplot2-theme#/) but I will give you a somewhat extended summary here. A custom theme could come in handy both in academia and industry to ensure a consistent style.
 
 ## Motivation

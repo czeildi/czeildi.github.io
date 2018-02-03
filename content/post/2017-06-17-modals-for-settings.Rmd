@@ -7,6 +7,12 @@ categories: ["R"]
 tags: ["shiny"]
 ---
 
+---
+output: 
+  html_document:
+    css: styles.css
+---
+
 For some time I have been wondering about the best way to hide more advanced settings from the regular user of your app. I have some apps with many different filters and options, all of which I want to keep because they have their legitimate usage. However, they take up valuable space and also confuse the user who does not need advanced options at the moment.
 
 I also learned about the possibility of using modals and wondered whether there is a use case waiting to be solved.

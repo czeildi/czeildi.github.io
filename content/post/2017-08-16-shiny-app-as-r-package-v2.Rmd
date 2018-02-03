@@ -7,6 +7,12 @@ categories: ["R"]
 tags: ["shiny", "package"]
 ---
 
+---
+output: 
+  html_document:
+    css: styles.css
+---
+
 In my previous [post](https://www.ildiczeller.com/2017/08/09/shiny-app-as-r-package/) I explored the possibility of wrapping a shiny app as an R package. I falsely stated that you cannot have a directory-based shiny app with `global.R`. Based on [this](https://stackoverflow.com/questions/37830819/developing-shiny-app-as-a-package-and-deploying-it-to-shiny-server) question on Stack Overflow I proved the contrary. It is actually possible but with serious limitations in my opinion so I still strongly advise the function based approach.
 
 You can put basically anything in the `inst` folder of your package and use those as is. I.e. you can put your regular `server.R`, `ui.R` and `global.R` files to `inst` and have an exported launcher function in `R`:

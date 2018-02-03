@@ -7,6 +7,12 @@ categories: ["R"]
 tags: ["forcats"]
 ---
 
+---
+output: 
+  html_document:
+    css: styles.css
+---
+
 ```{r setup, echo =FALSE}
 knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ```
