@@ -6,10 +6,21 @@
     <description>Recent content in Posts on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Downloadable ggplots in shiny</title>
+      <link>/2018/02/11/downloadable-ggplots-in-shiny/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/11/downloadable-ggplots-in-shiny/</guid>
+      <description>A use-case for shiny modules Plotly comes with a built-in download option for every plot, but what if you would like to provide a similar functionality to multiple ggplot2 plots in your shiny app? I will show you that with modules you can simplify the code.
+Without modules Your code in ui might look like this:
+# ui.R # ... numericInput(&amp;quot;sample_ratio&amp;quot;, ...), plotOutput(&amp;quot;mtcars&amp;quot;), downloadButton(&amp;quot;mtcars_download&amp;quot;), plotOutput(&amp;quot;iris&amp;quot;), downloadButton(&amp;quot;iris_download&amp;quot;), and your code in server might look like this:</description>
+    </item>
     
     <item>
       <title>merge on factor column</title>

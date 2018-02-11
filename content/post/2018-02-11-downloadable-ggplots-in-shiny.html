@@ -1,0 +1,83 @@
+---
+title: Downloadable ggplots in shiny
+author: Ildi Czeller
+date: '2018-02-11'
+slug: downloadable-ggplots-in-shiny
+categories: ["R"]
+tags: ["shiny"]
+---
+
+
+
+<div id="a-use-case-for-shiny-modules" class="section level1">
+<h1>A use-case for shiny modules</h1>
+<p>Plotly comes with a built-in download option for every plot, but what if you would like to provide a similar functionality to multiple ggplot2 plots in your shiny app? I will show you that with modules you can simplify the code.</p>
+<div id="without-modules" class="section level2">
+<h2>Without modules</h2>
+<p>Your code in ui might look like this:</p>
+<pre class="r"><code># ui.R
+# ...
+numericInput(&quot;sample_ratio&quot;, ...),
+plotOutput(&quot;mtcars&quot;),
+downloadButton(&quot;mtcars_download&quot;),
+plotOutput(&quot;iris&quot;),
+downloadButton(&quot;iris_download&quot;),</code></pre>
+<p>and your code in server might look like this:</p>
+<pre class="r"><code># server.R
+# ...
+output$mtcars &lt;- renderPlot({
+    ...
+})
+output$mtcars_download &lt;- downloadHandler({
+    ...
+})
+output$iris &lt;- renderPlot({
+    ...
+})
+output$iris_download &lt;- downloadHandler({
+    ...
+})</code></pre>
+<p>The different plots hold the relevant parts but you have to duplicate the download parts although they are the same. Moreover if you decide to add an option not only to download the plot but also the data you have to add the code to every plot.</p>
+</div>
+<div id="with-modules" class="section level2">
+<h2>With modules</h2>
+<p>You can focus on the fundamentally different parts, moreover your code is less error-prone (e.g accidentally download the same plot from two different buttons.) You also do not have to worry about having to give a different name to every one of your download buttons.</p>
+<pre class="r"><code># ui.R
+plotDownloadUI(&quot;mtcars&quot;),
+plotDownloadUI(&quot;iris&quot;)
+# server.R
+...
+callModule(plotDownload, &quot;mtcars&quot;, plotMtcarsReactive)
+callModule(plotDownload, &quot;iris&quot;, plotIrisReactive)</code></pre>
+<pre class="r"><code>plotDownloadUI &lt;- function(id, height = 400) {
+    ns &lt;- NS(id)
+    tagList(
+        fluidRow(
+            plotOutput(ns(&#39;plot&#39;), height = height)
+        ),
+        fluidRow(
+            column(
+                2, offset = 10,
+                downloadButton(ns(&quot;download_plot&quot;), &quot;Download figure&quot;)
+            )
+        )
+    )
+}
+
+plotDownload &lt;- function(input, output, session, plotFun) {
+    output$plot &lt;- renderPlot({
+        plotFun()
+    })
+    
+    output$download_plot &lt;- downloadHandler(
+        filename = function() {
+            &quot;plot.png&quot;
+        },
+        content = function(file) {
+            ggsave(file, plotFun(), width = 16, height = 10.4)
+        }
+    )
+}</code></pre>
+<p>The whole code is available <a href="https://github.com/czeildi/shiny-modules-examples">here</a> and you can see the working app <a href="https://ildi-czeller.shinyapps.io/shiny-modules-examples/">here</a>.</p>
+</div>
+</div>

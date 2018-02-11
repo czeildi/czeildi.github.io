@@ -1,0 +1,95 @@
+---
+title: Downloadable ggplots in shiny
+author: Ildi Czeller
+date: '2018-02-11'
+slug: downloadable-ggplots-in-shiny
+categories: ["R"]
+tags: ["shiny"]
+---
+# A use-case for shiny modules
+
+Plotly comes with a built-in download option for every plot, but what if you would like to provide a similar functionality to multiple ggplot2 plots in your shiny app? I will show you that with modules you can simplify the code.
+
+## Without modules
+
+Your code in ui might look like this:
+
+```{r ui, eval=FALSE}
+# ui.R
+# ...
+numericInput("sample_ratio", ...),
+plotOutput("mtcars"),
+downloadButton("mtcars_download"),
+plotOutput("iris"),
+downloadButton("iris_download"),
+```
+
+and your code in server might look like this:
+
+```{r server, eval = FALSE}
+# server.R
+# ...
+output$mtcars <- renderPlot({
+    ...
+})
+output$mtcars_download <- downloadHandler({
+    ...
+})
+output$iris <- renderPlot({
+    ...
+})
+output$iris_download <- downloadHandler({
+    ...
+})
+```
+
+The different plots hold the relevant parts but you have to duplicate the download parts although they are the same. Moreover if you decide to add an option not only to download the plot but also the data you have to add the code to every plot.
+
+## With modules
+
+You can focus on the fundamentally different parts, moreover your code is less error-prone (e.g accidentally download the same plot from two different buttons.) You also do not have to worry about having to give a different name to every one of your download buttons.
+
+```{r, eval = FALSE}
+# ui.R
+plotDownloadUI("mtcars"),
+plotDownloadUI("iris")
+# server.R
+...
+callModule(plotDownload, "mtcars", plotMtcarsReactive)
+callModule(plotDownload, "iris", plotIrisReactive)
+```
+
+```{r module, eval = FALSE}
+plotDownloadUI <- function(id, height = 400) {
+    ns <- NS(id)
+    tagList(
+        fluidRow(
+            plotOutput(ns('plot'), height = height)
+        ),
+        fluidRow(
+            column(
+                2, offset = 10,
+                downloadButton(ns("download_plot"), "Download figure")
+            )
+        )
+    )
+}
+
+plotDownload <- function(input, output, session, plotFun) {
+    output$plot <- renderPlot({
+        plotFun()
+    })
+    
+    output$download_plot <- downloadHandler(
+        filename = function() {
+            "plot.png"
+        },
+        content = function(file) {
+            ggsave(file, plotFun(), width = 16, height = 10.4)
+        }
+    )
+}
+```
+
+
+The whole code is available [here](https://github.com/czeildi/shiny-modules-examples) and you can see the working app [here](https://ildi-czeller.shinyapps.io/shiny-modules-examples/).
