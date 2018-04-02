@@ -1,0 +1,207 @@
+---
+title: Investigating difftime behavior
+author: Ildi Czeller
+date: '2018-04-02'
+slug: investigating-difftime-behavior
+categories: ["R"]
+tags: ["base R", "S3", "lookup"]
+---
+
+
+
+<style type="text/css">.rcode{
+  padding: 5px ;
+}
+
+.number{
+    color: rgb(21,20,181) ;
+}
+
+.functioncall{
+    color: red ;
+}
+
+.string{
+    color: rgb(153,153,255) ;
+}
+
+.keyword{
+    color: black;
+}
+
+.special{
+    color: black;
+}
+
+.symbol_argument{
+    color: rgb( 177,63,5) ;
+    font-weight: bold ;
+}
+
+.argument{
+    color: rgb( 177,63,5) ;
+}
+
+.comment{
+    color: rgb( 190, 190, 190) ;
+}
+
+.roxygencomment{
+    color: rgb(0,151,255);
+}
+
+.symbol_formalargs{
+    color: rgb(18,182,18);
+    font-style: italic;
+}
+
+.eqformalargs{
+    color: rgb(18,182,18);
+}
+
+.assignement{
+    color: rgb(55,55,98);
+}
+
+.package{
+    color: rgb(150,182,37);
+}
+
+.slot{
+    font-style:italic;
+}
+
+.symbol{
+    color: black ;
+}
+
+.prompt{
+    color: black ;
+}
+
+.line{
+    color: gray ;   
+}
+
+.focus{
+  background-color: yellow ;
+}
+</style>
+<p><em>Author: Ildi Czeller, <span class="citation">@czeildi</span> on Twitter and Github</em></p>
+<p>It caused me a great deal of headache to work around <code>as.difftime</code> to get what I wanted but also I learned much more than I expected along the way so I wanted to share the journey with you.</p>
+<div id="initial-experience" class="section level2">
+<h2>Initial experience</h2>
+<p>I had a data frame with two columns containing timestamps and I wanted to calculate the difference between them.</p>
+<pre><code>##              send_time           open_time
+## 1: 2018-04-01 00:01:00 2018-04-01 00:07:00
+## 2: 2018-04-02 00:01:00 2018-04-02 02:01:00</code></pre>
+<p>In the first row, there are 6 minutes between send and open time and in the second row there are 2 hours. The essence of the unexpected behavior I experienced:</p>
+<pre class='rcode'><span class='symbol'>dt</span><span class='keyword'>[</span><span class='keyword'>,</span> <span class='symbol'>open_time</span> <span class='keyword'>-</span> <span class='symbol'>send_time</span><span class='keyword'>]</span><span class='keyword'>[</span><span class='number'>2</span><span class='keyword'>]</span></pre>
+<pre><code>## Time difference of 120 mins</code></pre>
+<pre class='rcode'><span class='symbol'>dt</span><span class='keyword'>[</span><span class='number'>2</span><span class='keyword'>,</span> <span class='symbol'>open_time</span> <span class='keyword'>-</span> <span class='symbol'>send_time</span><span class='keyword'>]</span></pre>
+<pre><code>## Time difference of 2 hours</code></pre>
+<p>Basically the result for one row depends on other rows in the data frame.</p>
+<div id="finding-a-workaround" class="section level3">
+<h3>Finding a workaround</h3>
+<p>My first idea was to explicitly provide the <code>units</code> argument. However, it did not help.</p>
+<pre class='rcode'><span class='symbol'>dt</span><span class='keyword'>[</span><span class='keyword'>,</span> <span class='functioncall'>as.difftime</span><span class='keyword'>(</span><span class='symbol'>open_time</span> <span class='keyword'>-</span> <span class='symbol'>send_time</span><span class='keyword'>,</span> <span class='symbol_argument'>units</span> <span class='argument'>=</span> <span class='string'>"hours"</span><span class='keyword'>)</span><span class='keyword'>]</span><span class='keyword'>[</span><span class='number'>2</span><span class='keyword'>]</span></pre>
+<pre><code>## Time difference of 120 mins</code></pre>
+<p>I found that if I create a difftime object with <code>difftime</code> and not with subtraction it works as I expect.</p>
+<pre class='rcode'><span class='symbol'>dt</span><span class='keyword'>[</span><span class='keyword'>,</span> <span class='functioncall'>difftime</span><span class='keyword'>(</span><span class='symbol'>open_time</span><span class='keyword'>,</span> <span class='symbol'>send_time</span><span class='keyword'>,</span> <span class='symbol_argument'>units</span> <span class='argument'>=</span> <span class='string'>"hours"</span><span class='keyword'>)</span><span class='keyword'>]</span><span class='keyword'>[</span><span class='number'>2</span><span class='keyword'>]</span></pre>
+<pre><code>## Time difference of 2 hours</code></pre>
+</div>
+</div>
+<div id="digging-deeper" class="section level2">
+<h2>Digging deeper</h2>
+<div id="how-does-timestamp-subtraction-actually-work" class="section level3">
+<h3>How does timestamp subtraction actually work?</h3>
+<pre class='rcode'><span class='symbol'>base_time</span> <span class='assignment'>&lt;-</span> <span class='tidyverse_package package'>lubridate</span><span class='keyword'>::</span><span class='functioncall'>ymd_hms</span><span class='keyword'>(</span><span class='string'>"2018-04-01 00:00:00"</span><span class='keyword'>)</span>
+<span class='symbol'>later_times</span> <span class='assignment'>&lt;-</span> <span class='symbol'>base_time</span> <span class='keyword'>+</span> <span class='functioncall'>c</span><span class='keyword'>(</span>
+    <span class='tidyverse_package package'>lubridate</span><span class='keyword'>::</span><span class='functioncall'>period</span><span class='keyword'>(</span><span class='number'>1</span><span class='keyword'>,</span> <span class='string'>"month"</span><span class='keyword'>)</span><span class='keyword'>,</span>
+    <span class='tidyverse_package package'>lubridate</span><span class='keyword'>::</span><span class='functioncall'>period</span><span class='keyword'>(</span><span class='number'>1</span><span class='keyword'>,</span> <span class='string'>"day"</span><span class='keyword'>)</span><span class='keyword'>,</span>
+    <span class='tidyverse_package package'>lubridate</span><span class='keyword'>::</span><span class='functioncall'>period</span><span class='keyword'>(</span><span class='number'>1</span><span class='keyword'>,</span> <span class='string'>"minute"</span><span class='keyword'>)</span><span class='keyword'>,</span>
+    <span class='tidyverse_package package'>lubridate</span><span class='keyword'>::</span><span class='functioncall'>period</span><span class='keyword'>(</span><span class='number'>1</span><span class='keyword'>,</span> <span class='string'>"second"</span><span class='keyword'>)</span>
+<span class='keyword'>)</span></pre>
+<pre class='rcode'><span class='symbol'>later_times</span><span class='keyword'>[</span><span class='number'>1</span><span class='keyword'>:</span><span class='number'>1</span><span class='keyword'>]</span> <span class='keyword'>-</span> <span class='symbol'>base_time</span></pre>
+<pre><code>## Time difference of 30 days</code></pre>
+<pre class='rcode'><span class='symbol'>later_times</span><span class='keyword'>[</span><span class='number'>1</span><span class='keyword'>:</span><span class='number'>2</span><span class='keyword'>]</span> <span class='keyword'>-</span> <span class='symbol'>base_time</span></pre>
+<pre><code>## Time differences in days
+## [1] 30  1</code></pre>
+<pre class='rcode'><span class='symbol'>later_times</span><span class='keyword'>[</span><span class='number'>1</span><span class='keyword'>:</span><span class='number'>3</span><span class='keyword'>]</span> <span class='keyword'>-</span> <span class='symbol'>base_time</span></pre>
+<pre><code>## Time differences in mins
+## [1] 43200  1440     1</code></pre>
+<pre class='rcode'><span class='symbol'>later_times</span><span class='keyword'>[</span><span class='number'>1</span><span class='keyword'>:</span><span class='number'>4</span><span class='keyword'>]</span> <span class='keyword'>-</span> <span class='symbol'>base_time</span></pre>
+<pre><code>## Time differences in secs
+## [1] 2592000   86400      60       1</code></pre>
+<p>Based on this I am quite confident to say that firstly the smallest unit will be used for all values and secondly subtraction won’t result in units greater than a day.</p>
+</div>
+<div id="why-does-units-not-help" class="section level3">
+<h3>Why does <code>units</code> not help?</h3>
+<p>It still puzzled me why the explicit <code>units</code> argument did not help. Time to look at the source code at last!</p>
+<pre class='rcode'><span class='symbol'>as.difftime</span></pre>
+<pre class='rcode'><span class='keyword'>function</span> <span class='keyword'>(</span><span class='symbol_formalargs'>tim</span><span class='keyword'>,</span> <span class='symbol_formalargs'>format</span> <span class='eqformalargs'>=</span> <span class='string'>"%X"</span><span class='keyword'>,</span> <span class='symbol_formalargs'>units</span> <span class='eqformalargs'>=</span> <span class='string'>"auto"</span><span class='keyword'>)</span>
+<span class='keyword'>{</span>
+    <span class='keyword'>if</span> <span class='keyword'>(</span><span class='functioncall'>inherits</span><span class='keyword'>(</span><span class='symbol'>tim</span><span class='keyword'>,</span> <span class='string'>"difftime"</span><span class='keyword'>)</span><span class='keyword'>)</span>
+        <span class='keyword'>return</span><span class='keyword'>(</span><span class='symbol'>tim</span><span class='keyword'>)</span>
+    <span class='keyword'>if</span> <span class='keyword'>(</span><span class='functioncall'>is.character</span><span class='keyword'>(</span><span class='symbol'>tim</span><span class='keyword'>)</span><span class='keyword'>)</span> <span class='keyword'>{</span>
+        <span class='functioncall'>difftime</span><span class='keyword'>(</span><span class='functioncall'>strptime</span><span class='keyword'>(</span><span class='symbol'>tim</span><span class='keyword'>,</span> <span class='symbol_argument'>format</span> <span class='argument'>=</span> <span class='symbol'>format</span><span class='keyword'>)</span><span class='keyword'>,</span> <span class='functioncall'>strptime</span><span class='keyword'>(</span><span class='string'>"0:0:0"</span><span class='keyword'>,</span>
+            <span class='symbol_argument'>format</span> <span class='argument'>=</span> <span class='string'>"%X"</span><span class='keyword'>)</span><span class='keyword'>,</span> <span class='symbol_argument'>units</span> <span class='argument'>=</span> <span class='symbol'>units</span><span class='keyword'>)</span>
+    <span class='keyword'>}</span>
+    <span class='keyword'>else</span> <span class='keyword'>{</span>
+        <span class='comment'># ...</span>
+    <span class='keyword'>}</span>
+<span class='keyword'>}</span></pre>
+<p>Only by skimming the code we can see that it behaves differently depending on the type of its argument. What did we pass?</p>
+<pre class='rcode'><span class='functioncall'>class</span><span class='keyword'>(</span><span class='symbol'>dt</span><span class='keyword'>[</span><span class='number'>2</span><span class='keyword'>,</span> <span class='symbol'>open_time</span> <span class='keyword'>-</span> <span class='symbol'>send_time</span><span class='keyword'>]</span><span class='keyword'>)</span></pre>
+<pre><code>## [1] &quot;difftime&quot;</code></pre>
+<p>In the first two rows we get our answer: if the argument to <code>as.difftime</code> already a <code>difftime</code> object, then the <code>units</code> argument will have no effect.</p>
+</div>
+<div id="unitsauto" class="section level3">
+<h3><code>units=&quot;auto&quot;</code></h3>
+<p>My next question was where is the code to determine the used unit? As <code>as.difftime</code> makes no transformation it must happen when we subtract two vectors.</p>
+<p>Now it is useful to know that <code>-</code> is an S3 generic which means it selects what S3 method to call based on the type (S3 class) of its argument(s). In base R subtraction is defined specifically for timestamp objects (of class <code>POSIXt</code>). Note that you can call S3 methods directly with <code>[generic_name].[class_name]</code>.</p>
+<pre class='rcode'><span class='symbol'>`-.POSIXt`</span></pre>
+<pre class='rcode'><span class='keyword'>function</span> <span class='keyword'>(</span><span class='symbol_formalargs'>e1</span><span class='keyword'>,</span> <span class='symbol_formalargs'>e2</span><span class='keyword'>)</span>
+<span class='keyword'>{</span>
+    <span class='comment'># ...</span>
+    <span class='keyword'>if</span> <span class='keyword'>(</span><span class='keyword'>!</span><span class='functioncall'>inherits</span><span class='keyword'>(</span><span class='symbol'>e1</span><span class='keyword'>,</span> <span class='string'>"POSIXt"</span><span class='keyword'>)</span><span class='keyword'>)</span>
+        <span class='functioncall'>stop</span><span class='keyword'>(</span><span class='string'>"can only subtract from \"POSIXt\" objects"</span><span class='keyword'>)</span>
+    <span class='keyword'>if</span> <span class='keyword'>(</span><span class='functioncall'>nargs</span><span class='keyword'>(</span><span class='keyword'>)</span> <span class='NA'>==</span> <span class='number'>1</span><span class='keyword'>)</span>
+        <span class='functioncall'>stop</span><span class='keyword'>(</span><span class='string'>"unary '-' is not defined for \"POSIXt\" objects"</span><span class='keyword'>)</span>
+    <span class='keyword'>if</span> <span class='keyword'>(</span><span class='functioncall'>inherits</span><span class='keyword'>(</span><span class='symbol'>e2</span><span class='keyword'>,</span> <span class='string'>"POSIXt"</span><span class='keyword'>)</span><span class='keyword'>)</span>
+        <span class='keyword'>return</span><span class='keyword'>(</span><span class='functioncall'>difftime</span><span class='keyword'>(</span><span class='symbol'>e1</span><span class='keyword'>,</span> <span class='symbol'>e2</span><span class='keyword'>)</span><span class='keyword'>)</span>
+    <span class='comment'># if ...</span>
+    <span class='comment'># ...</span>
+<span class='keyword'>}</span></pre>
+<p>We subtract two values of class <code>POSIXt</code> so the relevant part for us is <code>return(difftime(e1, e2))</code>. Let’s look at <code>difftime</code> now.</p>
+<pre class='rcode'><span class='symbol'>difftime</span></pre>
+<pre class='rcode'><span class='keyword'>function</span> <span class='keyword'>(</span><span class='symbol_formalargs'>time1</span><span class='keyword'>,</span> <span class='symbol_formalargs'>time2</span><span class='keyword'>,</span> <span class='symbol_formalargs'>tz</span><span class='keyword'>,</span> <span class='symbol_formalargs'>units</span> <span class='eqformalargs'>=</span> <span class='functioncall'>c</span><span class='keyword'>(</span><span class='string'>"auto"</span><span class='keyword'>,</span> <span class='string'>"secs"</span><span class='keyword'>,</span> <span class='string'>"mins"</span><span class='keyword'>,</span>
+    <span class='string'>"hours"</span><span class='keyword'>,</span> <span class='string'>"days"</span><span class='keyword'>,</span> <span class='string'>"weeks"</span><span class='keyword'>)</span><span class='keyword'>)</span>
+<span class='keyword'>{</span>
+    <span class='comment'># ...</span>
+    <span class='symbol'>z</span> <span class='assignment'>&lt;-</span> <span class='functioncall'>unclass</span><span class='keyword'>(</span><span class='symbol'>time1</span><span class='keyword'>)</span> <span class='keyword'>-</span> <span class='functioncall'>unclass</span><span class='keyword'>(</span><span class='symbol'>time2</span><span class='keyword'>)</span>
+    <span class='functioncall'>attr</span><span class='keyword'>(</span><span class='symbol'>z</span><span class='keyword'>,</span> <span class='string'>"tzone"</span><span class='keyword'>)</span> <span class='assignment'>&lt;-</span> <span class='NA'>NULL</span>
+    <span class='symbol'>units</span> <span class='assignment'>&lt;-</span> <span class='functioncall'>match.arg</span><span class='keyword'>(</span><span class='symbol'>units</span><span class='keyword'>)</span>
+    <span class='keyword'>if</span> <span class='keyword'>(</span><span class='symbol'>units</span> <span class='NA'>==</span> <span class='string'>"auto"</span><span class='keyword'>)</span>
+        <span class='symbol'>units</span> <span class='assignment'>&lt;-</span> <span class='keyword'>if</span> <span class='keyword'>(</span><span class='functioncall'>all</span><span class='keyword'>(</span><span class='functioncall'>is.na</span><span class='keyword'>(</span><span class='symbol'>z</span><span class='keyword'>)</span><span class='keyword'>)</span><span class='keyword'>)</span>
+            <span class='string'>"secs"</span>
+        <span class='keyword'>else</span> <span class='keyword'>{</span>
+            <span class='symbol'>zz</span> <span class='assignment'>&lt;-</span> <span class='functioncall'>min</span><span class='keyword'>(</span><span class='functioncall'>abs</span><span class='keyword'>(</span><span class='symbol'>z</span><span class='keyword'>)</span><span class='keyword'>,</span> <span class='symbol_argument'>na.rm</span> <span class='argument'>=</span> <span class='number'>TRUE</span><span class='keyword'>)</span>
+            <span class='keyword'>if</span> <span class='keyword'>(</span><span class='keyword'>!</span><span class='functioncall'>is.finite</span><span class='keyword'>(</span><span class='symbol'>zz</span><span class='keyword'>)</span> <span class='keyword'>||</span> <span class='symbol'>zz</span> <span class='keyword'>&lt;</span> <span class='number'>60</span><span class='keyword'>)</span>
+                <span class='string'>"secs"</span>
+            <span class='keyword'>else</span> <span class='keyword'>if</span> <span class='keyword'>(</span><span class='symbol'>zz</span> <span class='keyword'>&lt;</span> <span class='number'>3600</span><span class='keyword'>)</span>
+                <span class='string'>"mins"</span>
+            <span class='keyword'>else</span> <span class='keyword'>if</span> <span class='keyword'>(</span><span class='symbol'>zz</span> <span class='keyword'>&lt;</span> <span class='number'>86400</span><span class='keyword'>)</span>
+                <span class='string'>"hours"</span>
+            <span class='keyword'>else</span> <span class='string'>"days"</span>
+        <span class='keyword'>}</span>
+    <span class='comment'># ...</span>
+<span class='keyword'>}</span></pre>
+<p>Without understanding every detail we can see that if <code>units</code> are not specified as in our case it will depend on the smallest absolute value. What makes these computations work is that <code>unclass()</code> on a <code>POSIXct</code> type object gives the number of seconds by default since <code>1970-01-01</code>.</p>
+<p>Finally I took the time to read the longish help file of <code>difftime</code> which contained most of this information. Still I would go this way again as I believe I learned more.</p>
+</div>
+<div id="conclusions" class="section level3">
+<h3>Conclusions</h3>
+<p>Look at the source code earlier and always be explicit with conversions if possible.</p>
+</div>
+</div>

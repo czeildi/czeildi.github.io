@@ -6,10 +6,19 @@
     <description>Recent content in Tags on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Base R</title>
+      <link>/tags/base-r/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/base-r/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Codeship</title>
@@ -66,6 +75,15 @@
     </item>
     
     <item>
+      <title>Lookup</title>
+      <link>/tags/lookup/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lookup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Magrittr</title>
       <link>/tags/magrittr/</link>
       <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
@@ -107,6 +125,15 @@
       <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/purrr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S3</title>
+      <link>/tags/s3/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/s3/</guid>
       <description></description>
     </item>
     
