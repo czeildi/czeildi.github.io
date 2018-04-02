@@ -128,7 +128,7 @@ Only by skimming the code we can see that it behaves differently depending on th
 class(dt[2, open_time - send_time])
 ```
 
-In the first two rows we get our answer: if the argument to `as.difftime` already a `difftime` object, then the `units` argument will have no effect.
+In the first two rows we get our answer: if the argument to `as.difftime` is already a `difftime` object, then the `units` argument will have no effect.
 
 ### `units="auto"`
 
