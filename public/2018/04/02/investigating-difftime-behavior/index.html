@@ -212,7 +212,7 @@
 <p>Only by skimming the code we can see that it behaves differently depending on the type of its argument. What did we pass?</p>
 <pre class='rcode'><span class='functioncall'>class</span><span class='keyword'>(</span><span class='symbol'>dt</span><span class='keyword'>[</span><span class='number'>2</span><span class='keyword'>,</span> <span class='symbol'>open_time</span> <span class='keyword'>-</span> <span class='symbol'>send_time</span><span class='keyword'>]</span><span class='keyword'>)</span></pre>
 <pre><code>## [1] &quot;difftime&quot;</code></pre>
-<p>In the first two rows we get our answer: if the argument to <code>as.difftime</code> already a <code>difftime</code> object, then the <code>units</code> argument will have no effect.</p>
+<p>In the first two rows we get our answer: if the argument to <code>as.difftime</code> is already a <code>difftime</code> object, then the <code>units</code> argument will have no effect.</p>
 </div>
 <div id="unitsauto" class="section level3">
 <h3><code>units=&quot;auto&quot;</code></h3>

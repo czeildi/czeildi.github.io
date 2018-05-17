@@ -9,6 +9,12 @@ My name is Ildi Czeller and I work as a Data Scientist at [Emarsys](https://www.
 
 ### Talks
 
+* European R Users Meeting 2018 May: Clean R Code workshop held with Jenő Pál (@paljenczy)
+  * [materials](https://github.com/czeildi/erum-2018-clean-r-code)
+  * [conference page](http://2018.erum.io/#talk-2-303)
+* European R Users Meeting 2018 May: The essentials to work with object-oriented systems in R
+  * [slides](https://github.com/czeildi/erum2018-oop-essentials)
+  * [conference page](http://2018.erum.io/#talk-2-83)
 * Budapest BI Forum conference 2017 November: Message send time optimization
     * [slides](https://github.com/czeildi/budapestbi-2017-slides)
     * [conference page](http://budapestbiforum.hu/2017/hu/eloadasok/making-email-campaigns-more-effective-send-time-optimization-czeller-ildiko-emarsys-technologies-kft/)
