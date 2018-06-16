@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pkg on experiments with R</title>
+    <link>/tags/pkg/</link>
+    <description>Recent content in Pkg on experiments with R</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/pkg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why shouldn&#39;t you use external data within R package</title>
+      <link>/2018/06/16/why-shouldn-t-you-use-external-data-within-r-package/</link>
+      <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/06/16/why-shouldn-t-you-use-external-data-within-r-package/</guid>
+      <description>Author: Ildi Czeller, @czeildi on Twitter and Github
+TL;DR Save all datasets you refer to from your functions within an R package as internal data.
+what I learned In an R package you might have a dataset that you want to use in your functions and want to publicize as well as external dataset. In this case you should save this dataset as both internal and external data with</description>
+    </item>
+    
+  </channel>
+</rss>

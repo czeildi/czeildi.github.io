@@ -7,6 +7,8 @@ categories: ["R"]
 tags: ["conference"]
 ---
 
+*Author: Ildi Czeller, @czeildi on Twitter and Github*
+
 Last week I was lucky enough to participate in this year's [Ropensci unconference](http://unconf18.ropensci.org/).
 
 In my work as a Data Scientist at [Emarsys](https://www.emarsys.com/en/) I rely on the R ecosystem a lot. I feel that to contribute back is not only fun and challenging but also my responsibility as I already benefit enormously from the FOSS tools and supportive community. I have had small contributions like filing a [bug ticket](https://github.com/r-dbi/bigrquery/issues/240) or [reviewing](https://github.com/ropensci/onboarding/issues/145) a package for [rOpenSci](https://ropensci.org/) and they were positive experiences. The unconf was a big exciting step for me.

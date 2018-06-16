@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.20.7" />
+
+
+<title>Why shouldn&#39;t you use external data within R package - experiments with R</title>
+<meta property="og:title" content="Why shouldn&#39;t you use external data within R package - experiments with R">
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="../../../../page/about/">About</a></li>
+    
+    <li><a href="../../../../post/">Blog</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">2 min read</span>
+    
+
+    <h1 class="article-title">Why shouldn&#39;t you use external data within R package</h1>
+
+    
+    <span class="article-date">2018/06/16</span>
+    
+
+    <div class="article-content">
+      
+
+<p><em>Author: Ildi Czeller, @czeildi on Twitter and Github</em></p>
+
+<h2 id="tl-dr">TL;DR</h2>
+
+<p>Save all datasets you refer to from your functions within an R package as internal data.</p>
+
+<h2 id="what-i-learned">what I learned</h2>
+
+<p>In an R package you might have a dataset that you want to use in your functions and want to publicize as well as external dataset. In this case you should save this dataset as <strong>both</strong> internal and external data with</p>
+
+<pre><code class="language-r">devtools::use_data(external_and_internal)
+devtools::use_data(external_and_internal, internal = TRUE)
+</code></pre>
+
+<p>(More details in Hadley&rsquo;s <a href="http://r-pkgs.had.co.nz/data.html">book</a> on R packages.)</p>
+
+<p>If you only save your data as external data:</p>
+
+<p>You get a <code>R CMD check</code> note about <code>undefined global variables: 'external_only'</code>. This you can eliminate with</p>
+
+<pre><code class="language-r">utils::globalVariables(&quot;external_only&quot;)
+</code></pre>
+
+<p>but then you only conceal the problem from yourself.</p>
+
+<p>If your package is loaded, everything looks fine but if someone want&rsquo;s to use your function without loading your package:</p>
+
+<pre><code class="language-r">datasetsexperiment::print_external_in_body()
+</code></pre>
+
+<p>it will fail with <code>object 'external_only' not found</code>. This error will be probably frustrating as your user can see the data just fine with</p>
+
+<pre><code class="language-r">datasetsexperiment::external_only
+</code></pre>
+
+<p>I came across this scenario last week and I am really lucky that somehow I suspected that the dataset should be saved as internal data. Otherwise I honestly do not know how long would the debugging have been.</p>
+
+<p>Previously I always loaded the package so it was strange suddenly see it not working.</p>
+
+<h2 id="detailed-results">detailed results</h2>
+
+<p>The exact scenario after <code>devtools::install()</code>:</p>
+
+<pre><code class="language-r">datasetsexperiment::print_internal_in_body()
+#&gt; [1] &quot;piece of data saved as both internal and external&quot;
+datasetsexperiment::print_external_in_body()
+#&gt; Error in datasetsexperiment::print_external_in_body(): object 'external_only' not found
+datasetsexperiment::external_only
+#&gt; [1] &quot;piece of external only data&quot;
+
+library(&quot;datasetsexperiment&quot;)
+
+datasetsexperiment::print_internal_in_body()
+#&gt; [1] &quot;piece of data saved as both internal and external&quot;
+datasetsexperiment::print_external_in_body()
+#&gt; [1] &quot;piece of external only data&quot;
+datasetsexperiment::external_only
+#&gt; [1] &quot;piece of external only data&quot;
+</code></pre>
+
+<h2 id="remark">remark</h2>
+
+<p>In the repository you can see experiment where the used data is in a function argument or in the body. This is because I remember seeing one of them work and the other not but I could not reproduce this scenario.</p>
+
+<h2 id="material">material</h2>
+
+<p>Code (R code + Dockerfile) is available on <a href="https://github.com/czeildi/datasetsexperiment">GitHub</a>.</p>
+
+    </div>
+  </article>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var d = document, s = d.createElement('script');
+    s.src = '//ildiczeller.disqus.com/embed.js'; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+              <a href = "https://github.com/czeildi">
+                   <img src="../../../../images/github-logo.png" width="22" height="22">
+              </a>
+          </li>
+          <li>
+              <a href = "https://twitter.com/czeildi">
+                  <img src="../../../../images/twitter-logo.png" width="22" height="22">
+              </a>
+          </li>
+          <li>
+              <a href = "https://www.linkedin.com/in/ildiko-czeller-310465a7">
+                  <img src="../../../../images/linkedin-logo.png" width="22" height="22">
+              </a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+
