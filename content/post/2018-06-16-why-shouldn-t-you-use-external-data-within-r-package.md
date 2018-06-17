@@ -43,7 +43,7 @@ datasetsexperiment::external_only
 
 I came across this scenario last week and I am really lucky that somehow I suspected that the dataset should be saved as internal data. Otherwise I honestly do not know how long would the debugging have been.
 
-Previously I always loaded the package so it was strange suddenly see it not working.
+Previously I always loaded the package so it was strange suddenly see it not working. Also running your testthat tests and `devtools::load_all()` both loads external datasets so you won't notice the problem during development.
 
 ## detailed results
 

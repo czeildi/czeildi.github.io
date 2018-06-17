@@ -106,7 +106,7 @@ devtools::use_data(external_and_internal, internal = TRUE)
 
 <p>I came across this scenario last week and I am really lucky that somehow I suspected that the dataset should be saved as internal data. Otherwise I honestly do not know how long would the debugging have been.</p>
 
-<p>Previously I always loaded the package so it was strange suddenly see it not working.</p>
+<p>Previously I always loaded the package so it was strange suddenly see it not working. Also running your testthat tests and <code>devtools::load_all()</code> both loads external datasets so you won&rsquo;t notice the problem during development.</p>
 
 <h2 id="detailed-results">detailed results</h2>
 
