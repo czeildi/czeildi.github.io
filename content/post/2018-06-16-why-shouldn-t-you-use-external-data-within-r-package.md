@@ -32,7 +32,7 @@ utils::globalVariables("external_only")
 ``` 
 but then you only conceal the problem from yourself.
 
-If your package is loaded, everything looks fine but if someone want's to use your function without loading your package: 
+If your package is loaded, everything looks fine but if someone wants to use your function without loading your package: 
 ```r 
 datasetsexperiment::print_external_in_body()
 ```
@@ -43,7 +43,7 @@ datasetsexperiment::external_only
 
 I came across this scenario last week and I am really lucky that somehow I suspected that the dataset should be saved as internal data. Otherwise I honestly do not know how long would the debugging have been.
 
-Previously I always loaded the package so it was strange suddenly see it not working. Also running your testthat tests and `devtools::load_all()` both loads external datasets so you won't notice the problem during development.
+Previously I always loaded the package so it was strange to suddenly see it not working. Also running your testthat tests and `devtools::load_all()` both load external datasets so you won't notice the problem during development.
 
 ## detailed results
 
@@ -70,7 +70,7 @@ datasetsexperiment::external_only
 
 ## remark
 
-In the repository you can see experiment where the used data is in a function argument or in the body. This is because I remember seeing one of them work and the other not but I could not reproduce this scenario.
+In the repository you can see an experiment where the used data is in a function argument or in the body. This is because I remember seeing one of them work and the other not but I could not reproduce this scenario.
 
 ## material
 
