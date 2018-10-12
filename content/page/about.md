@@ -38,4 +38,5 @@ My name is Ildi Czeller and I work as a Data Scientist at [Emarsys](https://www.
 
 ### Publications
 
+* [From 0 to 5: our journey of building and R-package ecosystem](https://blog.craftlab.hu/from-0-to-5-our-journey-of-building-an-r-package-ecosystem-ec257818e425)
 * [Weekend bias in send time optimisation](https://blog.craftlab.hu/weekend-bias-in-send-time-optimisation-ba80176af1b9)
