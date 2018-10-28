@@ -11,10 +11,14 @@ My name is Ildi Czeller and I work as a Data Scientist at [Emarsys](https://www.
 
 ### Talks
 
+* satRday Belgrade 2018 October: The essentials to work with object-oriented systems in R
+  * [slides](https://github.com/czeildi/talks/tree/master/2018-10-27_belgrade_satrday_essentials_of_oop_in_r)
+  * [conference page](https://belgrade2018.satrdays.org/#programme)
 * European R Users Meeting 2018 May: Clean R Code workshop held with Jenő Pál (@paljenczy)
   * [materials](https://github.com/czeildi/erum-2018-clean-r-code)
   * [conference page](http://2018.erum.io/#talk-2-303)
 * European R Users Meeting 2018 May: The essentials to work with object-oriented systems in R
+  * [video](https://www.youtube.com/watch?v=neP7Pfass8I)
   * [slides](https://github.com/czeildi/erum2018-oop-essentials)
   * [conference page](http://2018.erum.io/#talk-2-83)
 * Budapest BI Forum conference 2017 November: Message send time optimization
