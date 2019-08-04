@@ -13,13 +13,6 @@ tags: ["base R", "S3", "lookup"]
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r, echo=FALSE}
-knitr::knit_hooks$set(
-  source = highlight::hl_hook_source,
-  document = highlight::hl_hook_css
-)
-```
-
 ```{r echo=FALSE}
 suppressPackageStartupMessages(library("data.table"))
 ```

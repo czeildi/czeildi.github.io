@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on experiments with R</title>
-    <link>/tags/docker/</link>
+    <link>https://ildiczeller.com/tags/docker/</link>
     <description>Recent content in Docker on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ildiczeller.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R package check with Docker on Codeship</title>
-      <link>/2017/09/17/r-pkg-check-with-docker-on-codeship/</link>
+      <link>https://ildiczeller.com/2017/09/17/r-pkg-check-with-docker-on-codeship/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/09/17/r-pkg-check-with-docker-on-codeship/</guid>
+      <guid>https://ildiczeller.com/2017/09/17/r-pkg-check-with-docker-on-codeship/</guid>
       <description>Motivation At Emarsys we have several internal private R packages which are essential to our day-to-day work. They are also under constant development. We want to work on these in a collaborative and safe way. Fast and trustworthy CI &amp;amp; CD are essential: they reduce the cost and risk of adding a small but useful feature to one of our packages.
 Although in the R community Travis is the standard for CI, at Emarsys the whole company uses Codeship happily so we wanted to give it a go.</description>
     </item>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>experiments with R</title>
-    <link>/</link>
+    <link>https://ildiczeller.com/</link>
     <description>Recent content on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 16 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ildiczeller.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Why shouldn&#39;t you use external data within R package</title>
-      <link>/2018/06/16/why-shouldn-t-you-use-external-data-within-r-package/</link>
+      <link>https://ildiczeller.com/2018/06/16/why-shouldn-t-you-use-external-data-within-r-package/</link>
       <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/06/16/why-shouldn-t-you-use-external-data-within-r-package/</guid>
+      <guid>https://ildiczeller.com/2018/06/16/why-shouldn-t-you-use-external-data-within-r-package/</guid>
       <description>Author: Ildi Czeller, @czeildi on Twitter and Github
 TL;DR Save all datasets you refer to from your functions within an R package as internal data.
 what I learned In an R package you might have a dataset that you want to use in your functions and want to publicize as well as external dataset. In this case you should save this dataset as both internal and external data with</description>
@@ -24,10 +24,10 @@ what I learned In an R package you might have a dataset that you want to use in 
     
     <item>
       <title>My #runconf18 experience</title>
-      <link>/2018/06/01/my-runconf18-experience/</link>
+      <link>https://ildiczeller.com/2018/06/01/my-runconf18-experience/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/06/01/my-runconf18-experience/</guid>
+      <guid>https://ildiczeller.com/2018/06/01/my-runconf18-experience/</guid>
       <description>Author: Ildi Czeller, @czeildi on Twitter and Github
 Last week I was lucky enough to participate in this year&amp;rsquo;s Ropensci unconference.
 In my work as a Data Scientist at Emarsys I rely on the R ecosystem a lot. I feel that to contribute back is not only fun and challenging but also my responsibility as I already benefit enormously from the FOSS tools and supportive community. I have had small contributions like filing a bug ticket or reviewing a package for rOpenSci and they were positive experiences.</description>
@@ -35,19 +35,21 @@ In my work as a Data Scientist at Emarsys I rely on the R ecosystem a lot. I fee
     
     <item>
       <title>Investigating difftime behavior</title>
-      <link>/2018/04/02/investigating-difftime-behavior/</link>
+      <link>https://ildiczeller.com/2018/04/02/investigating-difftime-behavior/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/04/02/investigating-difftime-behavior/</guid>
-      <description>.rcode{ padding: 5px ; } .number{ color: rgb(21,20,181) ; } .functioncall{ color: red ; } .string{ color: rgb(153,153,255) ; } .keyword{ color: black; } .special{ color: black; } .symbol_argument{ color: rgb( 177,63,5) ; font-weight: bold ; } .argument{ color: rgb( 177,63,5) ; } .comment{ color: rgb( 190, 190, 190) ; } .roxygencomment{ color: rgb(0,151,255); } .symbol_formalargs{ color: rgb(18,182,18); font-style: italic; } .eqformalargs{ color: rgb(18,182,18); } .assignement{ color: rgb(55,55,98); } .package{ color: rgb(150,182,37); } .</description>
+      <guid>https://ildiczeller.com/2018/04/02/investigating-difftime-behavior/</guid>
+      <description>Author: Ildi Czeller, @czeildi on Twitter and Github
+## Warning: package &amp;#39;data.table&amp;#39; was built under R version 3.5.2 It caused me a great deal of headache to work around as.difftime to get what I wanted but also I learned much more than I expected along the way so I wanted to share the journey with you.
+Initial experience I had a data frame with two columns containing timestamps and I wanted to calculate the difference between them.</description>
     </item>
     
     <item>
       <title>Downloadable ggplots in shiny</title>
-      <link>/2018/02/11/downloadable-ggplots-in-shiny/</link>
+      <link>https://ildiczeller.com/2018/02/11/downloadable-ggplots-in-shiny/</link>
       <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/02/11/downloadable-ggplots-in-shiny/</guid>
+      <guid>https://ildiczeller.com/2018/02/11/downloadable-ggplots-in-shiny/</guid>
       <description>A use-case for shiny modules Plotly comes with a built-in download option for every plot, but what if you would like to provide a similar functionality to multiple ggplot2 plots in your shiny app? I will show you that with modules you can simplify the code.
 Without modules Your code in ui might look like this:
 # ui.R # ... numericInput(&amp;quot;sample_ratio&amp;quot;, ...), plotOutput(&amp;quot;mtcars&amp;quot;), downloadButton(&amp;quot;mtcars_download&amp;quot;), plotOutput(&amp;quot;iris&amp;quot;), downloadButton(&amp;quot;iris_download&amp;quot;), and your code in server might look like this:</description>
@@ -55,10 +57,10 @@ Without modules Your code in ui might look like this:
     
     <item>
       <title>merge on factor column</title>
-      <link>/2017/11/30/merge-on-factor-column/</link>
+      <link>https://ildiczeller.com/2017/11/30/merge-on-factor-column/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/11/30/merge-on-factor-column/</guid>
+      <guid>https://ildiczeller.com/2017/11/30/merge-on-factor-column/</guid>
       <description>library(&amp;quot;forcats&amp;quot;) library(&amp;quot;data.table&amp;quot;) library(&amp;quot;magrittr&amp;quot;) I recently started working with factors in R and found the forcats package amazing. However, I did not found much documentation on merging two data frames on a factor column so I made small examples and observed the behavior.
 same levels, different order In abc order: natural if converting from already ordered character.
 dt_abc &amp;lt;- data.table(size = as_factor(c(&amp;quot;big&amp;quot;, &amp;quot;medium&amp;quot;, &amp;quot;tiny&amp;quot;))) levels(dt_abc$size) ## [1] &amp;quot;big&amp;quot; &amp;quot;medium&amp;quot; &amp;quot;tiny&amp;quot; We can define the natural order:</description>
@@ -66,92 +68,101 @@ dt_abc &amp;lt;- data.table(size = as_factor(c(&amp;quot;big&amp;quot;, &amp;quo
     
     <item>
       <title>custom ggplot2 theme</title>
-      <link>/2017/10/15/custom-ggplot2-theme/</link>
+      <link>https://ildiczeller.com/2017/10/15/custom-ggplot2-theme/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/10/15/custom-ggplot2-theme/</guid>
+      <guid>https://ildiczeller.com/2017/10/15/custom-ggplot2-theme/</guid>
       <description>I spoke about custom ggplot2 themes at the last BURN meetup. My slides are available here but I will give you a somewhat extended summary here. A custom theme could come in handy both in academia and industry to ensure a consistent style.
 Motivation As easy as it is to generate meaningful and complex charts with ggplot2 it can be tedious to control every detail of your chart to make it publication-ready.</description>
     </item>
     
     <item>
       <title>R package check with Docker on Codeship</title>
-      <link>/2017/09/17/r-pkg-check-with-docker-on-codeship/</link>
+      <link>https://ildiczeller.com/2017/09/17/r-pkg-check-with-docker-on-codeship/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/09/17/r-pkg-check-with-docker-on-codeship/</guid>
+      <guid>https://ildiczeller.com/2017/09/17/r-pkg-check-with-docker-on-codeship/</guid>
       <description>Motivation At Emarsys we have several internal private R packages which are essential to our day-to-day work. They are also under constant development. We want to work on these in a collaborative and safe way. Fast and trustworthy CI &amp;amp; CD are essential: they reduce the cost and risk of adding a small but useful feature to one of our packages.
 Although in the R community Travis is the standard for CI, at Emarsys the whole company uses Codeship happily so we wanted to give it a go.</description>
     </item>
     
     <item>
       <title>shiny app as R package v2</title>
-      <link>/2017/08/16/shiny-app-as-r-package-v2/</link>
+      <link>https://ildiczeller.com/2017/08/16/shiny-app-as-r-package-v2/</link>
       <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/08/16/shiny-app-as-r-package-v2/</guid>
+      <guid>https://ildiczeller.com/2017/08/16/shiny-app-as-r-package-v2/</guid>
       <description>In my previous post I explored the possibility of wrapping a shiny app as an R package. I falsely stated that you cannot have a directory-based shiny app with global.R. Based on this question on Stack Overflow I proved the contrary. It is actually possible but with serious limitations in my opinion so I still strongly advise the function based approach.
 You can put basically anything in the inst folder of your package and use those as is.</description>
     </item>
     
     <item>
       <title>shiny app as R package</title>
-      <link>/2017/08/09/shiny-app-as-r-package/</link>
+      <link>https://ildiczeller.com/2017/08/09/shiny-app-as-r-package/</link>
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/08/09/shiny-app-as-r-package/</guid>
+      <guid>https://ildiczeller.com/2017/08/09/shiny-app-as-r-package/</guid>
       <description>Background I love and use shiny regularly and I also try to modularize my work more and more. Naturally I started to wonder whether I could have a whole shiny app as an R package and then possibly a project organizing multiple apps together. The answer is yes as I suspected.
 Several others already wrote about the topic, including Dean Attali and William Landau. However, I gained a deeper understanding by trying things out myself.</description>
     </item>
     
     <item>
       <title>R pkg development alongside packrat</title>
-      <link>/2017/08/02/r-pkg-development-alongside-packrat/</link>
+      <link>https://ildiczeller.com/2017/08/02/r-pkg-development-alongside-packrat/</link>
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/08/02/r-pkg-development-alongside-packrat/</guid>
+      <guid>https://ildiczeller.com/2017/08/02/r-pkg-development-alongside-packrat/</guid>
       <description>I use packrat for all my projects at Emarsys so for our internal packages as well as it eases collaboration. During package development there are numerous packages which come handy during development but not needed for usage. These are usually listed under the Suggests or Enhances field in the DESCRIPTION file. But should these be tracked with packrat as well?
 In my opinion, it depends. If it is testthat or roxygen2 probably everyone contributing to the package will use it so it makes sense to track with packrat.</description>
     </item>
     
     <item>
       <title>modals for settings in shiny</title>
-      <link>/2017/06/17/modals-for-settings-in-shiny/</link>
+      <link>https://ildiczeller.com/2017/06/17/modals-for-settings-in-shiny/</link>
       <pubDate>Sat, 17 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/06/17/modals-for-settings-in-shiny/</guid>
+      <guid>https://ildiczeller.com/2017/06/17/modals-for-settings-in-shiny/</guid>
       <description>For some time I have been wondering about the best way to hide more advanced settings from the regular user of your app. I have some apps with many different filters and options, all of which I want to keep because they have their legitimate usage. However, they take up valuable space and also confuse the user who does not need advanced options at the moment.
 I also learned about the possibility of using modals and wondered whether there is a use case waiting to be solved.</description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>/page/about/</link>
+      <link>https://ildiczeller.com/page/about/</link>
       <pubDate>Sat, 20 May 2017 15:32:39 +0200</pubDate>
       
-      <guid>/page/about/</guid>
+      <guid>https://ildiczeller.com/page/about/</guid>
       <description> My name is Ildi Czeller and I work as a Data Scientist at Emarsys in the Budapest office since I graduated as a mathematician from ELTE. Besides my work at Emarsys I am a mentor and organizer at Techcamp. I am also a proud alumna and supporter of The Joy of Thinking Foundation.
-List of talks and publications Talks  satRday Belgrade 2018 October: The essentials to work with object-oriented systems in R  slides on speakerdeck, slides on github  European R Users Meeting 2018 May: Clean R Code workshop held with Jenő Pál (@paljenczy)  materials  European R Users Meeting 2018 May: The essentials to work with object-oriented systems in R  slides on speakerdeck, slides on github video  Budapest BI Forum conference 2017 November: Message send time optimization  slides on speakerdeck, slides on github  BURN meetup 2017 October: custom ggplot2 theme  slides  RLadies meetup 2017 September: shiny introduction  materials  RLadies meetup 2017 June: shiny introduction  materials  Startup Safary Budapest 2017 April  slides  BURN meetup 2016 December: shiny modules  materials   Publications  From 0 to 5: our journey of building an R-package ecosystem Weekend bias in send time optimisation  </description>
+List of talks and publications Talks  useR! 2019 Toulouse 2019 July: ropsec: a package for easing operations security for the R user  slides on speakerdeck video  satRday Belgrade 2018 October: The essentials to work with object-oriented systems in R  slides on speakerdeck, slides on github  European R Users Meeting 2018 May: Clean R Code workshop held with Jenő Pál (@paljenczy)  materials  European R Users Meeting 2018 May: The essentials to work with object-oriented systems in R  slides on speakerdeck, slides on github video  Budapest BI Forum conference 2017 November: Message send time optimization  slides on speakerdeck, slides on github  BURN meetup 2017 October: custom ggplot2 theme  slides  RLadies meetup 2017 September: shiny introduction  materials  RLadies meetup 2017 June: shiny introduction  materials  Startup Safary Budapest 2017 April  slides  BURN meetup 2016 December: shiny modules  materials   Publications  From 0 to 5: our journey of building an R-package ecosystem Weekend bias in send time optimisation  </description>
     </item>
     
     <item>
       <title>the dot symbol</title>
-      <link>/2017/01/28/the-dot-symbol/</link>
+      <link>https://ildiczeller.com/2017/01/28/the-dot-symbol/</link>
       <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/01/28/the-dot-symbol/</guid>
+      <guid>https://ildiczeller.com/2017/01/28/the-dot-symbol/</guid>
       <description>The dot . appears in different places in the R ecosystem: e.g. purrr, magrittr’s %&amp;gt;%. I will explore and explain what happens if you mix these usages, or nest them, how the dot symbol is special and how it is not.
 Basic usage %&amp;gt;% of magrittr You should use the dot if the parameter you pipe forward is not the first parameter of your next function or if you use pipe with data.</description>
     </item>
     
     <item>
       <title>ggplot2: exploration of the group aesthetics</title>
-      <link>/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</link>
+      <link>https://ildiczeller.com/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</link>
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</guid>
+      <guid>https://ildiczeller.com/2017/01/08/ggplot2-exploration-of-the-group-aesthetics/</guid>
       <description>I have made several plots with ggplot2 in the past 2 years and occasionally got errors related to the group aesthetics. I solved these issues without once taking the time to fully understand how the group aesthetic works. This blogpost is a result of my experiments to finally explore how it works. My understanding is a combination of my experiments and Hadley Wickhams outstanding book about ggplot2. (https://github.com/hadley/ggplot2-book)
 Scenario 1: mapping based on one variable Our dummy data will be a unit square.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ildiczeller.com/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ildiczeller.com/page/about/</guid>
+      <description>About Me       code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs) { hljs.configure({languages: []}); hljs.initHighlightingOnLoad(); if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); } }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .</description>
     </item>
     
   </channel>

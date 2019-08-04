@@ -127,8 +127,7 @@
 <pre class="r"><code>dt %&gt;% ggplot(aes(x, y, pch = grp)) +
     geom_point(size = 3) +
     geom_line(aes(pch = NULL)) +
-    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)
-## Warning: Ignoring unknown aesthetics: shape</code></pre>
+    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)</code></pre>
 <p><img src="../../../../post/2017-01-08-explore_group_in_ggplot2_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>However in this case explicitly setting the <code>group</code> aesthetics is inarguably more clear. We even got a warning saying “Ignoring unknown aesthetics: shape”.</p>
 <pre class="r"><code>dt %&gt;% ggplot(aes(x, y, pch = grp)) +
@@ -193,14 +192,12 @@
 <pre class="r"><code>dt %&gt;% ggplot(aes(x, y, col = I(grp_1), pch = grp_2)) +
     geom_point(size = 3) +
     geom_line(aes(pch = NULL)) +
-    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)
-## Warning: Ignoring unknown aesthetics: shape</code></pre>
+    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)</code></pre>
 <p><img src="../../../../post/2017-01-08-explore_group_in_ggplot2_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <pre class="r"><code>dt %&gt;% ggplot(aes(x, y, col = I(grp_1), pch = grp_2)) +
     geom_point(size = 3) +
     geom_line(aes(col = NULL, pch = NULL)) +
-    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)
-## Warning: Ignoring unknown aesthetics: shape</code></pre>
+    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)</code></pre>
 <p><img src="../../../../post/2017-01-08-explore_group_in_ggplot2_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 <p>We can also set the group aesthetics to constant or combine these two approaches.</p>
 <pre class="r"><code>dt %&gt;% ggplot(aes(x, y, col = I(grp_1), pch = grp_2)) +
@@ -211,8 +208,7 @@
 <pre class="r"><code>dt %&gt;% ggplot(aes(x, y, col = I(grp_1), pch = grp_2)) +
     geom_point(size = 3) +
     geom_line(aes(group = 1, pch = NULL)) +
-    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)
-## Warning: Ignoring unknown aesthetics: shape</code></pre>
+    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)</code></pre>
 <p><img src="../../../../post/2017-01-08-explore_group_in_ggplot2_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <p><strong>What happens if we specify the <code>group</code> variable outside <code>aes</code>?</strong></p>
 <pre class="r"><code>dt %&gt;% ggplot(aes(x, y, col = I(grp_1), pch = grp_2)) +
@@ -229,14 +225,12 @@
 <pre class="r"><code>dt %&gt;% ggplot(aes(x, y, col = I(grp_1), pch = grp_2)) +
     geom_point(size = 3) +
     geom_line(group = 1, aes(pch = NULL)) +
-    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)
-## Warning: Ignoring unknown aesthetics: shape</code></pre>
+    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)</code></pre>
 <p><img src="../../../../post/2017-01-08-explore_group_in_ggplot2_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
 <pre class="r"><code>dt %&gt;% ggplot(aes(x, y, col = I(grp_1), pch = grp_2)) +
     geom_point(size = 3) +
     geom_line(group = 1, aes(col = NULL, pch = NULL)) +
-    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)
-## Warning: Ignoring unknown aesthetics: shape</code></pre>
+    geom_label(aes(label = id), vjust = &quot;inward&quot;, hjust = &quot;inward&quot;)</code></pre>
 <p><img src="../../../../post/2017-01-08-explore_group_in_ggplot2_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 <p>This way in the background we still have the group in aesthetics: it has effect although we overwrote the effect of joining lines, we did not overwrote every effect of the aesthetics mapping. So the order in which the points are linked: first levels of the group, then left to right, then order of appearance in dataset. Check for yourself with the above examples!</p>
 <p><em>e.g. blue &lt; red, circle &lt; triangle.</em></p>

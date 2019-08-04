@@ -32,7 +32,7 @@ The dot `.` appears in different places in the R ecosystem: e.g. purrr, magrittr
 You should use the dot if the parameter you pipe forward is not the first parameter of your next function or if you use pipe with data.table and use `[]` function.
 
 ```{r}
-lipsum::lipsums[1] %>% 
+lipsum::lipsum(1)%>% 
     stringi::stri_trans_totitle() %>% 
     gsub(' ', '-', .)
 ```
@@ -40,7 +40,7 @@ lipsum::lipsums[1] %>%
 You can also refer to the parameter with `.` if it is the first, but then you do not have to:
 
 ```{r}
-lipsum::lipsums[1] %>%
+lipsum::lipsum(1) %>%
     stringi::stri_trans_totitle(.) %>% 
     stringr::str_replace_all(., ' ', '-')
 ```

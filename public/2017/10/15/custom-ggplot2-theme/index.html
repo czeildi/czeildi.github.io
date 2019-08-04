@@ -57,7 +57,7 @@
 
   <article class="article">
     
-    <span class="article-duration">3 min read</span>
+    <span class="article-duration">4 min read</span>
     
 
     <h1 class="article-title">custom ggplot2 theme</h1>
@@ -77,6 +77,8 @@
 <li>font</li>
 <li>theme (in ggplot2 sense, like <code>theme_bw</code>).</li>
 </ul>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;data.table&#39; was built under R version 3.5.2</code></pre>
 <p>For a simple example data and base plot we will shorten our code from this:</p>
 <pre class="r"><code>our_ggplot + 
     scale_fill_manual(values = c(&quot;treatment&quot; = &quot;#377EB8&quot;,
@@ -134,6 +136,10 @@ our_ggplot</code></pre>
 <div id="color-palette-in-action" class="section level3">
 <h3>Color palette in action</h3>
 <pre class="r"><code>set_our_theme()</code></pre>
+<pre><code>## Warning: New theme missing the following elements: axis.ticks.length.x,
+## axis.ticks.length.x.top, axis.ticks.length.x.bottom, axis.ticks.length.y,
+## axis.ticks.length.y.left, axis.ticks.length.y.right, panel.grid, plot.tag,
+## plot.tag.position</code></pre>
 <div id="discrete-scale" class="section level4">
 <h4>Discrete scale:</h4>
 <pre class="r"><code>ggplot(data.table(x = as.character(1:7), y = 1), aes(x, y, fill = x)) + 

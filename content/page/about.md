@@ -11,13 +11,16 @@ My name is Ildi Czeller and I work as a Data Scientist at [Emarsys](https://www.
 
 ### Talks
 
+* [useR! 2019 Toulouse 2019 July](http://www.user2019.fr/talk_schedule/): ropsec: a package for easing operations security for the R user
+    * [slides on speakerdeck](https://speakerdeck.com/czeildi/ropsec-a-package-for-easing-operations-security-for-the-r-user)
+    * [video](youtube)
 * [satRday Belgrade 2018 October](https://belgrade2018.satrdays.org/#programme): The essentials to work with object-oriented systems in R
-  * [slides on speakerdeck](https://speakerdeck.com/czeildi/belgrade2018-satrday-oop-ildi-czeller), [slides on github](https://github.com/czeildi/talks/tree/master/2018-10-27_belgrade_satrday_essentials_of_oop_in_r)
+    * [slides on speakerdeck](https://speakerdeck.com/czeildi/belgrade2018-satrday-oop-ildi-czeller), [slides on github](https://github.com/czeildi/talks/tree/master/2018-10-27_belgrade_satrday_essentials_of_oop_in_r)
 * [European R Users Meeting 2018 May](http://2018.erum.io/#talk-2-303): Clean R Code workshop held with Jenő Pál (@paljenczy)
-  * [materials](https://github.com/czeildi/erum-2018-clean-r-code)
+    * [materials](https://github.com/czeildi/erum-2018-clean-r-code)
 * [European R Users Meeting 2018 May](http://2018.erum.io/#talk-2-83): The essentials to work with object-oriented systems in R
-  * [slides on speakerdeck](https://speakerdeck.com/czeildi/the-essentials-to-work-with-object-oriented-systems-in-r), [slides on github](https://github.com/czeildi/erum2018-oop-essentials)
-  * [video](https://www.youtube.com/watch?v=neP7Pfass8I)
+    * [slides on speakerdeck](https://speakerdeck.com/czeildi/the-essentials-to-work-with-object-oriented-systems-in-r), [slides on github](https://github.com/czeildi/erum2018-oop-essentials)
+    * [video](https://www.youtube.com/watch?v=neP7Pfass8I)
 * [Budapest BI Forum conference 2017 November](http://budapestbiforum.hu/2017/hu/eloadasok/making-email-campaigns-more-effective-send-time-optimization-czeller-ildiko-emarsys-technologies-kft/): Message send time optimization
     * [slides on speakerdeck](https://speakerdeck.com/czeildi/making-email-campaigns-more-effective-send-time-optimization), [slides on github](https://github.com/czeildi/budapestbi-2017-slides)
 * [BURN meetup 2017 October](https://www.meetup.com/Budapest-Users-of-R-Network/events/243298698/): custom ggplot2 theme

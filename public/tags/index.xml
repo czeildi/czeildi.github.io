@@ -2,174 +2,174 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on experiments with R</title>
-    <link>/tags/</link>
+    <link>https://ildiczeller.com/tags/</link>
     <description>Recent content in Tags on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 02 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ildiczeller.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Base R</title>
-      <link>/tags/base-r/</link>
+      <link>https://ildiczeller.com/tags/base-r/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/base-r/</guid>
+      <guid>https://ildiczeller.com/tags/base-r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Codeship</title>
-      <link>/tags/codeship/</link>
+      <link>https://ildiczeller.com/tags/codeship/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/codeship/</guid>
+      <guid>https://ildiczeller.com/tags/codeship/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Conference</title>
-      <link>/tags/conference/</link>
+      <link>https://ildiczeller.com/tags/conference/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/conference/</guid>
+      <guid>https://ildiczeller.com/tags/conference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Covr</title>
-      <link>/tags/covr/</link>
+      <link>https://ildiczeller.com/tags/covr/</link>
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/covr/</guid>
+      <guid>https://ildiczeller.com/tags/covr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>/tags/docker/</link>
+      <link>https://ildiczeller.com/tags/docker/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/docker/</guid>
+      <guid>https://ildiczeller.com/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Forcats</title>
-      <link>/tags/forcats/</link>
+      <link>https://ildiczeller.com/tags/forcats/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/forcats/</guid>
+      <guid>https://ildiczeller.com/tags/forcats/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ggplot2</title>
-      <link>/tags/ggplot2/</link>
+      <link>https://ildiczeller.com/tags/ggplot2/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ggplot2/</guid>
+      <guid>https://ildiczeller.com/tags/ggplot2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ggthemr</title>
-      <link>/tags/ggthemr/</link>
+      <link>https://ildiczeller.com/tags/ggthemr/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ggthemr/</guid>
+      <guid>https://ildiczeller.com/tags/ggthemr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lookup</title>
-      <link>/tags/lookup/</link>
+      <link>https://ildiczeller.com/tags/lookup/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/lookup/</guid>
+      <guid>https://ildiczeller.com/tags/lookup/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Magrittr</title>
-      <link>/tags/magrittr/</link>
+      <link>https://ildiczeller.com/tags/magrittr/</link>
       <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/magrittr/</guid>
+      <guid>https://ildiczeller.com/tags/magrittr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Package</title>
-      <link>/tags/package/</link>
+      <link>https://ildiczeller.com/tags/package/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/package/</guid>
+      <guid>https://ildiczeller.com/tags/package/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Packrat</title>
-      <link>/tags/packrat/</link>
+      <link>https://ildiczeller.com/tags/packrat/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/packrat/</guid>
+      <guid>https://ildiczeller.com/tags/packrat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pkg</title>
-      <link>/tags/pkg/</link>
+      <link>https://ildiczeller.com/tags/pkg/</link>
       <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/pkg/</guid>
+      <guid>https://ildiczeller.com/tags/pkg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pkgdown</title>
-      <link>/tags/pkgdown/</link>
+      <link>https://ildiczeller.com/tags/pkgdown/</link>
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/pkgdown/</guid>
+      <guid>https://ildiczeller.com/tags/pkgdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Purrr</title>
-      <link>/tags/purrr/</link>
+      <link>https://ildiczeller.com/tags/purrr/</link>
       <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/purrr/</guid>
+      <guid>https://ildiczeller.com/tags/purrr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>S3</title>
-      <link>/tags/s3/</link>
+      <link>https://ildiczeller.com/tags/s3/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/s3/</guid>
+      <guid>https://ildiczeller.com/tags/s3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shiny</title>
-      <link>/tags/shiny/</link>
+      <link>https://ildiczeller.com/tags/shiny/</link>
       <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/shiny/</guid>
+      <guid>https://ildiczeller.com/tags/shiny/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Visualization</title>
-      <link>/tags/visualization/</link>
+      <link>https://ildiczeller.com/tags/visualization/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/visualization/</guid>
+      <guid>https://ildiczeller.com/tags/visualization/</guid>
       <description></description>
     </item>
     
