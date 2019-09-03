@@ -13,7 +13,7 @@ My name is Ildi Czeller and I work as a Data Scientist at [Emarsys](https://www.
 
 * [useR! 2019 Toulouse 2019 July](http://www.user2019.fr/talk_schedule/): ropsec: a package for easing operations security for the R user
     * [slides on speakerdeck](https://speakerdeck.com/czeildi/ropsec-a-package-for-easing-operations-security-for-the-r-user)
-    * [video](youtube)
+    * [video](https://youtu.be/rrY4gVvbyfE?list=PL4IzsxWztPdm9_UFnWOCG7Rmw3oW5Fgju&t=618)
 * [satRday Belgrade 2018 October](https://belgrade2018.satrdays.org/#programme): The essentials to work with object-oriented systems in R
     * [slides on speakerdeck](https://speakerdeck.com/czeildi/belgrade2018-satrday-oop-ildi-czeller), [slides on github](https://github.com/czeildi/talks/tree/master/2018-10-27_belgrade_satrday_essentials_of_oop_in_r)
 * [European R Users Meeting 2018 May](http://2018.erum.io/#talk-2-303): Clean R Code workshop held with Jenő Pál (@paljenczy)

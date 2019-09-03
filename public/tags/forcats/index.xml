@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Forcats on experiments with R</title>
-    <link>https://ildiczeller.com/tags/forcats/</link>
+    <link>/tags/forcats/</link>
     <description>Recent content in Forcats on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 30 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ildiczeller.com/tags/forcats/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/forcats/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>merge on factor column</title>
-      <link>https://ildiczeller.com/2017/11/30/merge-on-factor-column/</link>
+      <link>/2017/11/30/merge-on-factor-column/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://ildiczeller.com/2017/11/30/merge-on-factor-column/</guid>
+      <guid>/2017/11/30/merge-on-factor-column/</guid>
       <description>library(&amp;quot;forcats&amp;quot;) library(&amp;quot;data.table&amp;quot;) library(&amp;quot;magrittr&amp;quot;) I recently started working with factors in R and found the forcats package amazing. However, I did not found much documentation on merging two data frames on a factor column so I made small examples and observed the behavior.
 same levels, different order In abc order: natural if converting from already ordered character.
 dt_abc &amp;lt;- data.table(size = as_factor(c(&amp;quot;big&amp;quot;, &amp;quot;medium&amp;quot;, &amp;quot;tiny&amp;quot;))) levels(dt_abc$size) ## [1] &amp;quot;big&amp;quot; &amp;quot;medium&amp;quot; &amp;quot;tiny&amp;quot; We can define the natural order:</description>

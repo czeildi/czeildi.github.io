@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ggthemr on experiments with R</title>
-    <link>https://ildiczeller.com/tags/ggthemr/</link>
+    <link>/tags/ggthemr/</link>
     <description>Recent content in Ggthemr on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ildiczeller.com/tags/ggthemr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/ggthemr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>custom ggplot2 theme</title>
-      <link>https://ildiczeller.com/2017/10/15/custom-ggplot2-theme/</link>
+      <link>/2017/10/15/custom-ggplot2-theme/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://ildiczeller.com/2017/10/15/custom-ggplot2-theme/</guid>
+      <guid>/2017/10/15/custom-ggplot2-theme/</guid>
       <description>I spoke about custom ggplot2 themes at the last BURN meetup. My slides are available here but I will give you a somewhat extended summary here. A custom theme could come in handy both in academia and industry to ensure a consistent style.
 Motivation As easy as it is to generate meaningful and complex charts with ggplot2 it can be tedious to control every detail of your chart to make it publication-ready.</description>
     </item>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lookup on experiments with R</title>
-    <link>https://ildiczeller.com/tags/lookup/</link>
+    <link>/tags/lookup/</link>
     <description>Recent content in Lookup on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 02 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ildiczeller.com/tags/lookup/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/lookup/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Investigating difftime behavior</title>
-      <link>https://ildiczeller.com/2018/04/02/investigating-difftime-behavior/</link>
+      <link>/2018/04/02/investigating-difftime-behavior/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ildiczeller.com/2018/04/02/investigating-difftime-behavior/</guid>
+      <guid>/2018/04/02/investigating-difftime-behavior/</guid>
       <description>Author: Ildi Czeller, @czeildi on Twitter and Github
 ## Warning: package &amp;#39;data.table&amp;#39; was built under R version 3.5.2 It caused me a great deal of headache to work around as.difftime to get what I wanted but also I learned much more than I expected along the way so I wanted to share the journey with you.
 Initial experience I had a data frame with two columns containing timestamps and I wanted to calculate the difference between them.</description>
