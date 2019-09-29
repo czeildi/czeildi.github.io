@@ -1,5 +1,4 @@
 ---
-date: 2017-05-20T15:32:39+02:00
 title: About Me
 ---
 
@@ -7,13 +6,19 @@ title: About Me
 
 My name is Ildi Czeller and I work as a Data Scientist at [Emarsys](https://www.emarsys.com/en-uk/) in the Budapest office since I graduated as a mathematician from [ELTE](https://www.elte.hu/en/). Besides my work at Emarsys I am a mentor and organizer at [Techcamp](http://techtabor.agondolkodasorome.hu/). I am also a proud alumna and supporter of [The Joy of Thinking Foundation](http://agondolkodasorome.hu/en/).
 
+
 ## List of talks and publications
 
 ### Talks
 
+
+* [BURN meetup 2019 September](https://www.meetup.com/Budapest-Users-of-R-Network/events/263996546/): highlights from useR! 2019
+    * [slides](https://docs.google.com/presentation/d/1rG9O60FZfoVUx4-triJ4Bg9E5OytHZ07oHaue9ZnZy0/edit#slide=id.p)
 * [useR! 2019 Toulouse 2019 July](http://www.user2019.fr/talk_schedule/): ropsec: a package for easing operations security for the R user
     * [slides on speakerdeck](https://speakerdeck.com/czeildi/ropsec-a-package-for-easing-operations-security-for-the-r-user)
     * [video](https://youtu.be/rrY4gVvbyfE?list=PL4IzsxWztPdm9_UFnWOCG7Rmw3oW5Fgju&t=618)
+* [RLadies Meetup 2019 May Budapest](https://github.com/rladies/meetup-presentations_budapest/tree/master/Meetup_2019_05_30): clean code in R
+    * [workshop materials](https://github.com/rladies/meetup-presentations_budapest/tree/master/Meetup_2019_05_30)
 * [satRday Belgrade 2018 October](https://belgrade2018.satrdays.org/#programme): The essentials to work with object-oriented systems in R
     * [slides on speakerdeck](https://speakerdeck.com/czeildi/belgrade2018-satrday-oop-ildi-czeller), [slides on github](https://github.com/czeildi/talks/tree/master/2018-10-27_belgrade_satrday_essentials_of_oop_in_r)
 * [European R Users Meeting 2018 May](http://2018.erum.io/#talk-2-303): Clean R Code workshop held with Jenő Pál (@paljenczy)
