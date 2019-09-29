@@ -6,20 +6,9 @@
     <description>Recent content in Pages on experiments with R</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 May 2017 15:32:39 +0200</lastBuildDate>
     
 	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About Me</title>
-      <link>/page/about/</link>
-      <pubDate>Sat, 20 May 2017 15:32:39 +0200</pubDate>
-      
-      <guid>/page/about/</guid>
-      <description> My name is Ildi Czeller and I work as a Data Scientist at Emarsys in the Budapest office since I graduated as a mathematician from ELTE. Besides my work at Emarsys I am a mentor and organizer at Techcamp. I am also a proud alumna and supporter of The Joy of Thinking Foundation.
-List of talks and publications Talks  useR! 2019 Toulouse 2019 July: ropsec: a package for easing operations security for the R user  slides on speakerdeck video  satRday Belgrade 2018 October: The essentials to work with object-oriented systems in R  slides on speakerdeck, slides on github  European R Users Meeting 2018 May: Clean R Code workshop held with Jenő Pál (@paljenczy)  materials  European R Users Meeting 2018 May: The essentials to work with object-oriented systems in R  slides on speakerdeck, slides on github video  Budapest BI Forum conference 2017 November: Message send time optimization  slides on speakerdeck, slides on github  BURN meetup 2017 October: custom ggplot2 theme  slides  RLadies meetup 2017 September: shiny introduction  materials  RLadies meetup 2017 June: shiny introduction  materials  Startup Safary Budapest 2017 April  slides  BURN meetup 2016 December: shiny modules  materials   Publications  From 0 to 5: our journey of building an R-package ecosystem Weekend bias in send time optimisation  </description>
-    </item>
     
     <item>
       <title></title>
@@ -28,6 +17,16 @@ List of talks and publications Talks  useR! 2019 Toulouse 2019 July: ropsec: a p
       
       <guid>/page/about/</guid>
       <description>About Me       code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs) { hljs.configure({languages: []}); hljs.initHighlightingOnLoad(); if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); } }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/page/about/</guid>
+      <description>My name is Ildi Czeller and I work as a Data Scientist at Emarsys in the Budapest office since I graduated as a mathematician from ELTE. Besides my work at Emarsys I am a mentor and organizer at Techcamp. I am also a proud alumna and supporter of The Joy of Thinking Foundation.
+List of talks and publications Talks  BURN meetup 2019 September: highlights from useR! 2019  slides  useR!</description>
     </item>
     
   </channel>
