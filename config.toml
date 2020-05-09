@@ -1,10 +1,8 @@
 baseurl = "https://ildiczeller.com"
-relativeurls = true
 languageCode = "en-us"
 title = "experiments with R"
-theme = "hugo-lithium-theme"
+theme = "hugo-lithium"
 googleAnalytics = "UA-121776912-1"
-disqusShortname = "ildiczeller"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 
 [permalinks]
@@ -12,7 +10,7 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "About"
-    url = "/page/about/"
+    url = "/about/"
 [[menu.main]]
     name = "Blog"
     url = "/post/"
@@ -21,18 +19,13 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
     description = "Personal website of Ildi Czeller"
 
     # options for highlight.js (version, additional languages, and theme)
-    highlightjsVersion = "9.11.0"
-    highlightjsCDN = "//cdn.bootcss.com"
+    highlightjsVersion = "9.12.0"
+    highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
     highlightjsLang = ["r", "yaml"]
     highlightjsTheme = "github"
 
-    MathJaxCDN = "//cdn.bootcss.com"
-    MathJaxVersion = "2.7.1"
-    
+    MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    MathJaxVersion = "2.7.5"
 
-    [params.logo]
-    url = "logo.jpg"
-    width = 50
-    height = 50
-    alt = "Logo"
-    
+    favicon = "favicon.ico"
+
