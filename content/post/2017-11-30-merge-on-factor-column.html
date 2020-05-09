@@ -74,7 +74,7 @@ dt_fct &lt;- data.table(size = fct_reorder(as_factor(c(&quot;big&quot;, &quot;me
 ## 3:   tiny</code></pre>
 <pre class="r"><code>merge(dt_chr, dt_fct, by = &quot;size&quot;) %T&gt;%
     {print(levels(.$size))}</code></pre>
-<pre><code>## [1] &quot;big&quot;    &quot;medium&quot; &quot;tiny&quot;</code></pre>
+<pre><code>## NULL</code></pre>
 <pre><code>##      size
 ## 1:    big
 ## 2: medium
