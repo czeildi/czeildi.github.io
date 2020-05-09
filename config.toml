@@ -29,3 +29,9 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 
     favicon = "favicon.ico"
 
+    [params.logo]
+    url = "logo.jpg"
+    width = 50
+    height = 50
+    alt = "Logo"
+
