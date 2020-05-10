@@ -1,6 +1,6 @@
 baseurl = "https://ildiczeller.com"
 languageCode = "en-us"
-title = "experiments with R"
+title = "Ildi Czeller's personal website"
 theme = "hugo-lithium"
 googleAnalytics = "UA-121776912-1"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
@@ -11,12 +11,26 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 [[menu.main]]
     name = "About"
     url = "/about/"
+    weight = 1
 [[menu.main]]
     name = "Blog"
     url = "/post/"
+    weight = 2
+[[menu.main]]
+    name = "GitHub"
+    url = "https://github.com/czeildi"
+    weight = 3
+[[menu.main]]
+    name = "Twitter"
+    url = "https://twitter.com/czeildi"
+    weight = 4
+[[menu.main]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/ildiko-czeller/"
+    weight = 5
 
 [params]
-    description = "Personal website of Ildi Czeller"
+    description = "Ildi Czeller's personal website"
 
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.12.0"
