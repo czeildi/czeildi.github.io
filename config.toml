@@ -17,12 +17,12 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
     url = "/post/"
     weight = 2
 [[menu.main]]
-    name = "GitHub"
-    url = "https://github.com/czeildi"
+    name = "Talks"
+    url = "/talks/"
     weight = 3
 [[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/czeildi"
+    name = "GitHub"
+    url = "https://github.com/czeildi"
     weight = 4
 [[menu.main]]
     name = "LinkedIn"
@@ -41,10 +41,8 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
     MathJaxVersion = "2.7.5"
 
-    favicon = "favicon.ico"
-
     [params.logo]
-    url = "logo.jpg"
+    url = "logo.jpeg"
     width = 50
     height = 50
     alt = "Logo"
