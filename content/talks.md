@@ -4,7 +4,14 @@ title: List of talks and publications
 
 ## Talks
 
-
+* [DataFest Tbilisi 2019 November](https://2019.datafest.ge/): Introduction to Shiny: building interactive dashboards with R
+    * [workshop materials](https://github.com/czeildi/shiny-intro-workshop-datafest-2019)
+* [DataFest Tbilisi 2019 November](https://2019.datafest.ge/): Making email campaigns more effective: message send time optimization
+    * [slides as google slides](https://docs.google.com/presentation/d/1t67vaecyWdNpFVjZDqaFUP4UO0qRptgelgQMGHaeYxk/edit#slide=id.p1)
+    * [slides on speakerdeck](https://speakerdeck.com/czeildi/making-email-campaigns-more-effective-send-time-optimization)
+* [RLadies Meetup 2019 November Tbilisi](https://www.meetup.com/rladies-tbilisi/events/265973111/): working with sheets in R
+    * [slides](https://docs.google.com/presentation/d/1YlaFQI1dVZ_5fE6glzBsHc67z02G_kHhlq0WAEobsdM/edit#slide=id.p1)
+    * [code](https://github.com/rladies/meetup-presentations_tbilisi/tree/master/2019_11_13_sheets)
 * [BURN meetup 2019 September](https://www.meetup.com/Budapest-Users-of-R-Network/events/263996546/): highlights from useR! 2019
     * [slides](https://docs.google.com/presentation/d/1rG9O60FZfoVUx4-triJ4Bg9E5OytHZ07oHaue9ZnZy0/edit#slide=id.p)
 * [useR! 2019 Toulouse 2019 July](http://www.user2019.fr/talk_schedule/): ropsec: a package for easing operations security for the R user
